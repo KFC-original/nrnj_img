@@ -1,0 +1,314 @@
+<style>
+.nrj{max-width:860px;margin:0 auto;background:#fff;color:#1d1d1f;font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:break-word;letter-spacing:-0.01em;-webkit-text-size-adjust:100%;-webkit-user-select:none;user-select:none;line-height:1.4}
+.nrj *{box-sizing:border-box;margin:0;padding:0}
+.nrj img{display:block;max-width:100%;border:0;-webkit-user-drag:none;pointer-events:none}
+.nrj-sec{padding:96px 48px}
+.nrj-gray{background:#f5f5f7}
+.nrj-dark{background:#000;color:#fff}
+.nrj-chip{display:inline-block;padding:10px 23px;border:2px solid #f5a51c;border-radius:999px;font-size:18px;font-weight:800;line-height:1.2}
+.nrj-h2{margin-top:24px;font-size:40px;font-weight:800;line-height:1.2;letter-spacing:-0.02em}
+.nrj-lead{margin-top:24px;font-size:21px;font-weight:500;line-height:1.5;color:#6e6e73}
+.nrj-lead b{font-weight:700}
+.nrj-dark .nrj-lead{color:#b5b5ba}
+.nrj-photo{margin-top:24px;width:100%;aspect-ratio:764/430;object-fit:cover;border-radius:28px}
+.nrj-note{margin-top:24px;font-size:12px;font-weight:500;line-height:1.5;color:#57575c;text-align:center}
+.nrj-dark .nrj-note{color:#98989e}
+
+/* 00 topbar + 01 hero */
+.nrj-top{padding:33px 48px 0;text-align:center}
+.nrj-top-note{font-size:13px;font-weight:600;color:#57575c}
+.nrj-top img{width:160px;margin:16px auto 0}
+.nrj-hero{padding:96px 48px 64px;text-align:center}
+.nrj-h1{font-size:64px;font-weight:800;line-height:1.2;letter-spacing:-0.03em}
+.nrj-hero .nrj-lead{margin-top:20px}
+.nrj-hero-img{width:100%;aspect-ratio:860/576;object-fit:cover}
+
+/* 02 fact */
+.nrj-stats{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.nrj-stat{background:#2e2e33;border:1.5px solid #55555c;border-radius:20px;padding:32px 24px;display:flex;flex-direction:column}
+.nrj-bar-accent{display:block;width:40px;height:4px;border-radius:999px;background:#f5a51c}
+.nrj-stat .nrj-bar-accent{margin:15px 0 15px}
+.nrj-stat-v{margin-top:12px;font-size:40px;font-weight:800;line-height:1.2;color:#f5f5f7}
+.nrj-stat-d{margin-top:12px;font-size:18px;font-weight:600;line-height:1.3;color:#f5f5f7}
+.nrj-viz{margin-top:auto;padding-top:20px}
+.nrj-axis{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;font-weight:600;color:#98989e}
+.nrj-axis b{font-weight:700}
+.nrj-ticks{display:flex;gap:3px;height:56px;align-items:center}
+.nrj-ticks i{flex:1;height:8px;border-radius:2px;background:#f5a51c}
+.nrj-ticks i.off{background:#4a4a52}
+.nrj-people{display:flex;justify-content:space-between;height:56px;align-items:center}
+.nrj-person{width:16px}
+.nrj-person i{display:block;width:7px;height:7px;margin:0 auto 2px;border-radius:50%;background:#f5a51c}
+.nrj-person s{display:block;width:14px;height:10px;margin:0 auto;border-radius:5px 5px 2px 2px;background:#f5a51c;text-decoration:none}
+.nrj-person.off i,.nrj-person.off s{background:#4a4a52}
+.nrj-track{display:flex;height:12px;border-radius:6px;overflow:hidden;background:#4a4a52}
+.nrj-track i{display:block;height:100%;border-radius:6px;background:#f5a51c}
+.nrj-track+.nrj-axis{margin-top:8px;margin-bottom:9px}
+
+/* 04 income */
+.nrj-income{margin-top:24px;padding-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:end;height:394px}
+.nrj-col{display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
+.nrj-col-v{font-size:24px;font-weight:800}
+.nrj-col-bar{width:100%;margin-top:12px;border-radius:14px}
+.nrj-col-x{margin-top:12px;font-size:14px;font-weight:600;color:#6e6e73}
+
+/* 05 edu steps */
+.nrj-steps{margin-top:48px;border-top:1px solid #d6d6db}
+.nrj-step{display:flex;gap:16px;padding:28px 0;border-bottom:1px solid #d6d6db}
+.nrj-step-no{flex:0 0 24px;font-size:15px;font-weight:800;color:#57575c;line-height:1.9}
+.nrj-step-t{font-size:24px;font-weight:700;line-height:1.2}
+.nrj-step-b{margin-top:8px;font-size:17px;font-weight:500;line-height:24px;color:#6e6e73}
+
+/* 06 work */
+.nrj-work .nrj-lead{font-size:22px;color:#57575c}
+.nrj-work{padding-bottom:48px}
+.nrj-work + .nrj-sec{padding-top:48px}
+
+/* 08 conditions */
+.nrj-cards{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px 16px}
+.nrj-card{background:#fff;border-radius:20px;padding:32px 24px;display:flex;flex-direction:column}
+.nrj-card .nrj-bar-accent{margin-bottom:10px}
+.nrj-card-k{font-size:13px;font-weight:700;color:#57575c}
+.nrj-card-v{margin-top:10px;font-size:36px;font-weight:800;line-height:1.2;letter-spacing:-0.02em}
+.nrj-card-s{margin-top:10px;min-height:44px;font-size:14px;font-weight:600;line-height:1.55;color:#6e6e73}
+.nrj-card .nrj-viz{padding-top:10px}
+.nrj-card .nrj-axis{color:#57575c}
+.nrj-card .nrj-axis b{color:#1d1d1f}
+.nrj-days{display:flex;justify-content:space-between;height:32px;align-items:center}
+.nrj-days span{width:24px;height:24px;border-radius:50%;background:#f5a51c;font-size:11px;font-weight:700;line-height:24px;text-align:center}
+.nrj-days span.off{background:#e3e3e8;color:#57575c}
+.nrj-hours{display:flex;gap:3px;height:32px;align-items:center}
+.nrj-hours i{flex:1;height:10px;border-radius:2px;background:#e3e3e8}
+.nrj-hours i.on{background:#f5a51c}
+.nrj-hours-axis{display:grid;grid-template-columns:5fr 4fr 3fr;margin-top:8px;font-size:11px;font-weight:600;color:#57575c}
+.nrj-hours-axis span:nth-child(2){display:flex;justify-content:space-between;font-weight:700;color:#1d1d1f;padding-right:8px}
+.nrj-hours-axis span:last-child{text-align:right}
+.nrj-zero{height:32px;display:flex;align-items:center}
+.nrj-zero span{display:block;width:100%;height:28px;border-radius:8px;background:#e3e3e8;font-size:11px;font-weight:700;line-height:28px;text-align:center;color:#57575c}
+.nrj-months{display:flex;justify-content:space-between;height:32px;align-items:center}
+.nrj-months i{width:12px;height:28px;border-radius:4px;background:#f5a51c}
+.nrj-inc{display:flex;gap:4px;height:41px}
+.nrj-inc-y{width:12px;display:flex;flex-direction:column;justify-content:center;font-size:10px;font-weight:700;line-height:12px;color:#57575c;text-align:center}
+.nrj-inc-plot{flex:1;display:flex;gap:5px;align-items:flex-end;border-left:1px solid #d6d6db;border-bottom:1px solid #d6d6db;padding-left:4px}
+.nrj-inc-plot i{flex:1;border-radius:3px 3px 0 0}
+.nrj-inc-x{margin-top:3px;font-size:11px;font-weight:600;color:#57575c;text-align:right}
+.nrj-loc{display:flex;align-items:center;height:32px;padding:0 6px}
+.nrj-loc i{width:8px;height:8px;border-radius:50%;background:#e3e3e8;flex:0 0 auto}
+.nrj-loc s{flex:1;height:4px;border-radius:2px;background:#e3e3e8;text-decoration:none}
+.nrj-loc b{width:20px;height:20px;border-radius:50%;background:#f5a51c;flex:0 0 auto;position:relative}
+.nrj-loc b:after{content:"";position:absolute;left:6.5px;top:6.5px;width:7px;height:7px;border-radius:50%;background:#fff}
+.nrj-perks{margin-top:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.nrj-perk{padding:16px 8px;border:2px solid #f5a51c;border-radius:20px;background:#fff;font-size:18px;font-weight:800;line-height:24px;text-align:center}
+
+/* 10 apply */
+.nrj-apply{padding-bottom:48px}
+.nrj-apply .nrj-lead{color:#b5b5ba;font-weight:700}
+.nrj-flow{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.nrj-flow span{padding:12px 16px;border-radius:12px;background:#f5f5f7;font-size:15px;font-weight:700}
+.nrj-flow em{font-style:normal;font-size:15px;font-weight:500;color:#57575c}
+.nrj-apply-img{margin-top:24px;width:100%;aspect-ratio:764/620;object-fit:cover;border-radius:28px}
+.nrj-letter{margin-top:24px;padding:40px;border-radius:28px;background:#f5f5f7}
+.nrj-letter .nrj-bar-accent{margin-bottom:20px}
+.nrj-letter-k{font-size:13px;font-weight:700;color:#57575c}
+.nrj-letter-b{margin-top:20px;font-size:17px;font-weight:500;line-height:1.55}
+.nrj-letter-b p+p{margin-top:1.55em}
+.nrj-sign{margin-top:28px;display:flex;justify-content:flex-end;align-items:center;gap:16px;font-size:14px;font-weight:600;color:#6e6e73}
+.nrj-sign img{width:125px}
+
+/* 11 footer */
+.nrj-foot{padding:48px;text-align:center}
+.nrj-foot img{width:249px;margin:0 auto}
+.nrj-foot p{margin-top:18px;font-size:12px;font-weight:500;line-height:1.5;color:#57575c}
+
+/* mobile */
+@media (max-width:600px){
+  .nrj-pc{display:none}
+  .nrj-sec{padding:64px 20px}
+  .nrj-top{padding:24px 20px 0}
+  .nrj-top img{width:128px;margin-top:12px}
+  .nrj-hero{padding:48px 20px 40px}
+  .nrj-h1{font-size:44px}
+  .nrj-chip{padding:8px 18px;font-size:15px}
+  .nrj-h2{margin-top:18px;font-size:30px}
+  .nrj-lead,.nrj-work .nrj-lead{margin-top:16px;font-size:17px}
+  .nrj-photo,.nrj-apply-img{border-radius:20px}
+  .nrj-stats{grid-template-columns:1fr;gap:12px}
+  .nrj-stat{padding:24px 22px}
+  .nrj-stat .nrj-bar-accent{margin:0 0 4px}
+  .nrj-stat-v{font-size:36px}
+  .nrj-stat-d{font-size:16px}
+  .nrj-income{height:300px;gap:10px}
+  .nrj-col-v{font-size:19px}
+  .nrj-col-bar{border-radius:10px}
+  .nrj-col-x{font-size:13px}
+  .nrj-steps{margin-top:32px}
+  .nrj-step{gap:10px;padding:22px 0}
+  .nrj-step-no{flex-basis:20px;font-size:13px;line-height:1.8}
+  .nrj-step-t{font-size:19px;line-height:1.3}
+  .nrj-step-b{font-size:15px;line-height:23px}
+  .nrj-step-b br{display:none}
+  .nrj-cards{grid-template-columns:1fr;gap:12px}
+  .nrj-card{padding:24px 22px}
+  .nrj-card-v{font-size:32px}
+  .nrj-card-s{min-height:0}
+  .nrj-perks{grid-template-columns:1fr 1fr;gap:10px}
+  .nrj-perk{font-size:16px;padding:14px 6px}
+  .nrj-flow{display:grid;grid-template-columns:1fr 1fr;gap:8px;counter-reset:nrjf}
+  .nrj-flow em{display:none}
+  .nrj-flow span{padding:12px;font-size:14px;counter-increment:nrjf}
+  .nrj-flow span:before{content:counter(nrjf) ". ";color:#a8710f}
+  .nrj-work{padding-bottom:32px}
+  .nrj-work + .nrj-sec{padding-top:32px}
+  .nrj-letter{padding:28px 22px;border-radius:20px}
+  .nrj-letter-b{font-size:16px}
+  .nrj-sign{flex-wrap:wrap;gap:10px}
+  .nrj-sign img{width:110px}
+  .nrj-foot{padding:40px 20px}
+  .nrj-foot img{width:200px}
+}
+</style>
+<div class="nrj">
+
+<div class="nrj-top">
+  <div class="nrj-top-note">2026 하반기 채용</div>
+  <img src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/logo-wide.webp" alt="노른자 공인중개사사무소">
+</div>
+<div class="nrj-hero">
+  <h1 class="nrj-h1">시작이 전부.</h1>
+  <p class="nrj-lead">같은 사람도, 어디서 시작하느냐에 따라 <br class="nrj-pc">결과는 완전히 달라집니다.</p>
+</div>
+<img class="nrj-hero-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/hero.webp" alt="START 버튼을 누르는 손">
+
+<div class="nrj-sec nrj-dark">
+  <span class="nrj-chip">팩트체크</span>
+  <h2 class="nrj-h2">말 대신, 숫자.</h2>
+  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 계약까지의 시간부터 월 실수령액까지 <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
+  <div class="nrj-stats">
+    <div class="nrj-stat">
+      <span class="nrj-bar-accent"></span>
+      <div class="nrj-stat-v">25.7일</div>
+      <div class="nrj-stat-d">입사 후 첫 계약까지<br>걸린 평균 기간</div>
+      <div class="nrj-viz">
+        <div class="nrj-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
+        <div class="nrj-axis"><span>0일</span><span>30일</span></div>
+      </div>
+    </div>
+    <div class="nrj-stat">
+      <span class="nrj-bar-accent"></span>
+      <div class="nrj-stat-v">7/10명</div>
+      <div class="nrj-stat-d">입사 1개월 이내<br>첫 계약 달성</div>
+      <div class="nrj-viz">
+        <div class="nrj-people"><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span></div>
+        <div class="nrj-axis"><span>달성 72.7%</span><span>미달성 27.3%</span></div>
+      </div>
+    </div>
+    <div class="nrj-stat">
+      <span class="nrj-bar-accent"></span>
+      <div class="nrj-stat-v">38.6%</div>
+      <div class="nrj-stat-d">월 실수령 1000만원<br>달성자 비율</div>
+      <div class="nrj-viz">
+        <div class="nrj-track"><i style="width:38.6%"></i></div>
+        <div class="nrj-axis"><span>1000만 원 이상</span><b>38.6%</b></div>
+        <div class="nrj-track"><i style="width:53.9%;background:#a8710f"></i></div>
+        <div class="nrj-axis"><span>500만 원 이상</span><b>53.9%</b></div>
+      </div>
+    </div>
+  </div>
+  <p class="nrj-note">집계 기간 내 입사자 중 30일 이상 근무자 기준. 총매출이 아닌, 순수 개인 실수령액. (집계기간 2022년 4분기~ 2026년 2분기)</p>
+</div>
+
+<div class="nrj-sec nrj-gray">
+  <span class="nrj-chip">평균수입</span>
+  <h2 class="nrj-h2">첫 3개월.<br>성장의 흐름을 보다.</h2>
+  <p class="nrj-lead">입사 후 1개월 차부터 3개월 차까지의 월별 평균 개인 실수령액입니다. <br class="nrj-pc">누적 금액이 아닌, 각 개월 차에 실제로 수령한 금액을 기준으로 계산했습니다.</p>
+  <div class="nrj-income">
+    <div class="nrj-col"><div class="nrj-col-v">195만</div><div class="nrj-col-bar" style="height:27%;background:#ffd98a"></div><div class="nrj-col-x">1개월 차</div></div>
+    <div class="nrj-col"><div class="nrj-col-v">428만</div><div class="nrj-col-bar" style="height:62%;background:#f7bc55"></div><div class="nrj-col-x">2개월 차</div></div>
+    <div class="nrj-col"><div class="nrj-col-v">631만</div><div class="nrj-col-bar" style="height:100%;background:#f5a51c"></div><div class="nrj-col-x">3개월 차</div></div>
+  </div>
+  <p class="nrj-note">집계 기간 내 입사자 중 3개월 이상 근무자 기준. 총매출이 아닌, 순수 개인 실수령액. (집계기간 2022년 4분기~ 2026년 2분기)</p>
+</div>
+
+<div class="nrj-sec">
+  <span class="nrj-chip">교육</span>
+  <h2 class="nrj-h2">대표가 직접.<br>모르는 게 없을 때까지.</h2>
+  <p class="nrj-lead">계약에 필요한 실무와 영업의 핵심을 <br class="nrj-pc">진도가 아닌 개인의 이해도에 맞춰 꼼꼼하게 알려드립니다. <br class="nrj-pc">기본부터 첫 계약까지, 대표가 함께 합니다.</p>
+  <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/edu.webp" alt="대표와 1:1로 상권 지도를 보며 배우는 교육 장면">
+  <div class="nrj-steps">
+    <div class="nrj-step"><div class="nrj-step-no">01</div><div><h3 class="nrj-step-t">기본. 직접 체험하는 중개의 모든 과정.</h3><p class="nrj-step-b">매물 접수, 현장 확인, 사진 촬영, 광고 등록, 고객 응대, 그리고 계약. <br>모든 단계를 직접 체험하며 일이 어떤 순서로 이어지는지, 그 순간 무엇을 판단해야 하는지를 익힙니다. <br>정해진 일을 따라 하는 데서 멈추지 않습니다. <br>왜 그렇게 하는지 이해해야 혼자서도 매물 하나를 맡아 계약으로 끝낼 수 있습니다. <br>그 기본기를 여기서 만듭니다.</p></div></div>
+    <div class="nrj-step"><div class="nrj-step-no">02</div><div><h3 class="nrj-step-t">실전. 전화 한 통을 계약으로 바꾸는 법.</h3><p class="nrj-step-b">콜이 끊이지 않는 광고 방법에서 시작합니다. <br>전화 문의를 실제 미팅으로 바꾸는 상담, 고객이 진짜 원하는 조건을 읽어내는 질문, <br>조건을 맞춰가는 협상, 한 번의 상담을 계약으로 연결하는 클로징을 익힙니다. <br>중개의 전 과정을 대표가 단계마다 직접 확인하고, 부족한 부분을 하나하나 짚어 피드백합니다. <br>단순히 매물을 소개하는 중개가 아니라, 고객을 움직여 계약을 만들어내는 진짜 중개를 배웁니다.</p></div></div>
+    <div class="nrj-step"><div class="nrj-step-no">03</div><div><h3 class="nrj-step-t">성장. 계약이 계약을 부르다.</h3><p class="nrj-step-b">중개 사고를 막는 계약서 작성부터 입주까지, 계약을 완성도 있게 마무리하는 법을 익힙니다. <br>계약이 끝난 뒤에도 고객과의 관계를 이어갑니다. <br>사업장을 넓히고, 옮기고, 두 번째 매장을 내는 2차 계약은 물론 <br>기존 고객의 소개가 또 다른 계약으로 이어지는, 끊이지 않는 영업 구조를 만듭니다. <br>광고로 온 고객은 비교하고 오지만, 소개로 온 고객은 믿고 오기에 계약 확률은 더 높아집니다.</p></div></div>
+  </div>
+</div>
+
+<div class="nrj-sec nrj-gray nrj-work">
+  <span class="nrj-chip">업무방식</span>
+  <h2 class="nrj-h2">몸이 아닌 머리로.<br>감이 아닌 데이터로.</h2>
+  <p class="nrj-lead">노른자만의 누적된 데이터로 매물과 고객을 먼저 분석해 계약확률은 높이고, <br class="nrj-pc">무작정 돌아다니는 불필요한 업무는 줄입니다. <br class="nrj-pc">반복 업무는 시스템에 맡기고, 상담과 계약에 집중합니다.</p>
+  <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/work.webp" alt="듀얼 모니터로 상권 지도와 데이터를 분석하는 모습">
+</div>
+
+<div class="nrj-sec nrj-gray">
+  <span class="nrj-chip">근무</span>
+  <h2 class="nrj-h2">업무는 짧게.<br>휴식은 길게.</h2>
+  <div class="nrj-cards">
+    <div class="nrj-card">
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무일</div><div class="nrj-card-v">주 5일</div><div class="nrj-card-s">월–금 · 토, 일, 공휴일 휴무</div>
+      <div class="nrj-viz"><div class="nrj-days"><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="off">토</span><span class="off">일</span></div><div class="nrj-axis"><span>주 5일 근무</span><span>토·일·공휴일 휴무</span></div></div>
+    </div>
+    <div class="nrj-card">
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무시간</div><div class="nrj-card-v">10 to 6</div><div class="nrj-card-s">오전 10시 – 오후 6시</div>
+      <div class="nrj-viz"><div class="nrj-hours"><i></i><i></i><i></i><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><div class="nrj-hours-axis"><span>0시</span><span><b>10시</b><b>6시</b></span><span>24시</span></div></div>
+    </div>
+    <div class="nrj-card">
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">야근</div><div class="nrj-card-v">없음</div><div class="nrj-card-s">정시 퇴근</div>
+      <div class="nrj-viz"><div class="nrj-zero"><span>야근 0시간</span></div><div class="nrj-axis"><span>18시 이후 저녁 있는 삶.</span></div></div>
+    </div>
+    <div class="nrj-card">
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">연차 · 월차</div><div class="nrj-card-v">자유 사용</div><div class="nrj-card-s">눈치 없이</div>
+      <div class="nrj-viz"><div class="nrj-months"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="nrj-axis"><span>1월</span><span>12월</span></div></div>
+    </div>
+    <div class="nrj-card">
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">급여방식</div><div class="nrj-card-v">인센티브</div><div class="nrj-card-s">실적에 따라 정직하게</div>
+      <div class="nrj-viz"><div class="nrj-inc"><div class="nrj-inc-y">수<br>익</div><div class="nrj-inc-plot"><i style="height:26%;background:#ffce80"></i><i style="height:44%;background:#fdc467"></i><i style="height:63%;background:#faba4e"></i><i style="height:81%;background:#f8af35"></i><i style="height:100%;background:#f5a51c"></i></div></div><div class="nrj-inc-x">실적</div></div>
+    </div>
+    <div class="nrj-card">
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무지</div><div class="nrj-card-v">홍대・신촌</div><div class="nrj-card-s">사무실, 출· 퇴근 편한 홍대입구역, 신촌역 중앙에 위치</div>
+      <div class="nrj-viz"><div class="nrj-loc"><i></i><s></s><b></b><s></s><i></i></div><div class="nrj-axis"><span>홍대입구역</span><span>신촌역</span></div></div>
+    </div>
+  </div>
+  <div class="nrj-perks"><div class="nrj-perk">목표달성 프로모션</div><div class="nrj-perk">생일 축하선물</div><div class="nrj-perk">경조사비</div><div class="nrj-perk">근속 감사금</div></div>
+</div>
+
+<div class="nrj-sec nrj-dark">
+  <span class="nrj-chip">팀문화</span>
+  <h2 class="nrj-h2">경쟁 대신 협력.</h2>
+  <p class="nrj-lead"><b>시작할땐 혼자여도, 일할땐 혼자가 되지 않도록.</b> <br class="nrj-pc">매물도, 정보도, 노하우도 전부 나눕니다. <br class="nrj-pc">혼자 잘하는 사람보다 함께 이기는 팀을 지향합니다.</p>
+  <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/team.webp" alt="같은 박자로 노를 젓는 조정 팀">
+</div>
+
+<div class="nrj-sec nrj-apply">
+  <span class="nrj-chip">지원</span>
+  <h2 class="nrj-h2">우리의 준비는 끝났습니다.<br>기회는 지금입니다.</h2>
+  <p class="nrj-lead">당신의 시작, 노른자와 함께하세요.</p>
+  <div class="nrj-flow"><span>서류 지원</span><em>→</em><span>대표 1:1 면접</span><em>→</em><span>사무실 / 업무 안내</span><em>→</em><span>입사</span></div>
+  <img class="nrj-apply-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/apply.webp" alt="새 팀원을 맞이하며 악수를 청하는 모습">
+  <div class="nrj-letter">
+    <span class="nrj-bar-accent"></span>
+    <div class="nrj-letter-k">대표의 말</div>
+    <div class="nrj-letter-b">
+      <p>저도 부동산을 처음 시작하려고 마음먹었을 때, <br class="nrj-pc">어디가 좋은 곳인지, 어떤 기준으로 선택해야 하는지, <br class="nrj-pc">무엇을 물어봐야 하는지 몰라 그저 막막하고 불안했습니다. <br class="nrj-pc">그래서 이 공고에는 그 마음을 덜어드리고자 좋아 보이는 말은 빼고, <br class="nrj-pc">직접 확인하실 수 있는 것들로만 채웠습니다.</p>
+      <p>앞에서 보신 숫자는 노른자부동산이 지금까지 걸어온 기록입니다. <br class="nrj-pc">제가 겪은 시행착오를 우리 팀원들은 겪지 않았으면 하는 마음에 <br class="nrj-pc">오랫동안 교육 과정을 다듬어 왔고, <br class="nrj-pc">이제는 배운 대로만 하시면 계약은 걱정 없다고 <br class="nrj-pc">말할 수 있는 단계까지 왔습니다.</p>
+      <p>공고에 다 담지 못한 내용은 면접에서 알려드리겠습니다. <br class="nrj-pc">궁금한 건 무엇이든 물어보세요.</p>
+      <p>끝까지 읽어주셔서 감사합니다. <br class="nrj-pc">어디서 시작하시든 그 도전을 응원하겠습니다.</p>
+    </div>
+    <div class="nrj-sign"><span>노른자공인중개사사무소 대표</span><img src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/signature.webp" alt="대표 서명"></div>
+  </div>
+</div>
+
+<div class="nrj-foot">
+  <img src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/logo-footer.webp" alt="노른자 공인중개사사무소">
+  <p>Copyright Ⓒ 2026 노른자공인중개사사무소. All rights reserved.<br>본 공고의 제작물(상세페이지, 편집물, 그래픽, 문구, 구성)은 저작권법의 보호를 받습니다. 무단 사용 시 법적 책임이 따를 수 있습니다.</p>
+</div>
+
+</div>
