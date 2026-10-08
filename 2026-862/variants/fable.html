@@ -22,51 +22,30 @@
 .nrj-stat .nrj-bar-accent{margin:15px 0}
 .nrj-stat-v{margin-top:12px;font-size:40px;font-weight:800;line-height:1.2;color:#f5f5f7}
 .nrj-stat-d{margin-top:12px;font-size:18px;font-weight:600;line-height:1.3;color:#f5f5f7}
-.nrj-stat-d small{font-size:13px;font-weight:600;color:#98989e}
-/* 22명 격자: 5주 이내(밝은 앰버) · 11주 이내(진한 앰버) · 미달성(회색) */
-.nrj-crowd{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px 2px;justify-items:center}
-.nrj-p{width:14px}
-.nrj-p i{display:block;width:6px;height:6px;margin:0 auto 2px;border-radius:50%;background:#f5a51c}
-.nrj-p s{display:block;width:12px;height:8px;margin:0 auto;border-radius:4px 4px 2px 2px;background:#f5a51c;text-decoration:none}
-.nrj-p.b i,.nrj-p.b s{background:#a8710f}
-.nrj-p.off i,.nrj-p.off s{background:#4a4a52}
-.nrj-legend{margin-top:12px;display:grid;gap:4px;font-size:11px;font-weight:600;color:#98989e}
-.nrj-legend span{display:flex;align-items:center;gap:6px}
-.nrj-legend em{flex:0 0 auto;width:8px;height:8px;border-radius:2px;background:#f5a51c}
-.nrj-legend em.b{background:#a8710f}
-.nrj-legend b{margin-left:auto;font-weight:700;color:#f5f5f7}
-/* 주 단위 눈금: 11칸 = 11주 */
-.nrj-weeks{display:flex;gap:3px;height:46px;align-items:center}
-.nrj-weeks i{flex:1;height:10px;border-radius:2px;background:#4a4a52}
-.nrj-weeks i.on{background:#f5a51c}
-.nrj-weeks i.part{background:linear-gradient(90deg,#f5a51c 57%,#4a4a52 57%)}
-/* 두 기간 비교 막대 */
-.nrj-cmp{display:grid;gap:8px}
-.nrj-cmp-row{display:grid;gap:5px}
-.nrj-cmp-t{display:flex;justify-content:space-between;font-size:11px;font-weight:600;color:#98989e}
-.nrj-cmp-t b{font-weight:700;color:#f5f5f7}
 .nrj-track{height:12px;border-radius:6px;background:#4a4a52;overflow:hidden}
-.nrj-track i{display:block;height:100%;border-radius:6px;background:#f5a51c}
-.nrj-track i.b{background:#a8710f}
+.nrj-track i{display:block;height:100%;border-radius:6px}
+.nrj-track+.nrj-axis{margin-top:6px;margin-bottom:10px}
+.nrj-rates .nrj-axis:last-child{margin-bottom:0}
+.nrj-tl{position:relative;padding-top:24px}
+.nrj-tl-mark{position:absolute;top:0;transform:translateX(-50%);font-size:13px;font-weight:800;color:#f5a51c;white-space:nowrap}
+.nrj-tl-track{position:relative;height:12px;border-radius:6px;background:#4a4a52;overflow:hidden}
+.nrj-tl-track i{display:block;height:100%;border-radius:6px;background:#f5a51c}
+.nrj-tl-track s{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:#2e2e33;text-decoration:none}
 
 /* 04 평균 업무기록 */
 .nrj-acts{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .nrj-act{background:#fff;border-radius:20px;padding:32px 24px;display:flex;flex-direction:column}
 .nrj-act .nrj-bar-accent{margin-bottom:10px}
-.nrj-act-k{font-size:13px;font-weight:700;color:#57575c}
+.nrj-act-k{font-size:14px;font-weight:700;color:#57575c}
+.nrj-act-k span{font-weight:600;color:#8e8e93}
 .nrj-act-v{margin-top:10px;font-size:40px;font-weight:800;line-height:1.2;letter-spacing:-0.02em}
 .nrj-act-v small{margin-left:2px;font-size:22px;font-weight:800}
-.nrj-act-s{margin-top:8px;font-size:14px;font-weight:600;color:#6e6e73}
-.nrj-act .nrj-viz{padding-top:28px}
+.nrj-act .nrj-viz{padding-top:24px}
 .nrj-act .nrj-axis{color:#57575c}
-.nrj-units{display:flex;gap:4px;height:36px;align-items:stretch}
-.nrj-units i{flex:1;border-radius:6px;background:#f5a51c}
-.nrj-units i.part{background:linear-gradient(90deg,#f5a51c var(--f),#e3e3e8 var(--f))}
-.nrj-pair{display:flex;gap:18px;height:36px;align-items:flex-end}
-.nrj-big{width:30px}
-.nrj-big i{display:block;width:13px;height:13px;margin:0 auto 3px;border-radius:50%;background:#f5a51c}
-.nrj-big s{display:block;width:28px;height:18px;border-radius:9px 9px 3px 3px;background:#f5a51c;text-decoration:none}
-.nrj-big.part i,.nrj-big.part s{background:linear-gradient(90deg,#f5a51c 60%,#e3e3e8 60%)}
+.nrj-picto{display:flex;gap:6px;align-items:flex-end;height:40px}
+.nrj-ic{position:relative;display:block;flex:0 0 auto}
+.nrj-ic svg{display:block}
+.nrj-ic-on{position:absolute;left:0;top:0;height:100%;overflow:hidden}
 
 @media (max-width:600px){
   .nrj-pc{display:none}
@@ -79,11 +58,10 @@
   .nrj-stat .nrj-bar-accent{margin:0 0 4px}
   .nrj-stat-v{font-size:36px}
   .nrj-stat-d{font-size:16px}
-  .nrj-p{width:16px}
   .nrj-acts{margin-top:28px;grid-template-columns:1fr;gap:12px}
   .nrj-act{padding:24px 22px}
   .nrj-act-v{font-size:36px}
-  .nrj-act .nrj-viz{padding-top:20px}
+  .nrj-act .nrj-viz{padding-top:18px}
 }
 </style>
 <div class="nrj">
@@ -91,42 +69,41 @@
 <div class="nrj-sec nrj-dark">
   <span class="nrj-chip">팩트체크</span>
   <h2 class="nrj-h2">말 대신, 숫자.</h2>
-  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 가계약까지 걸린 시간부터 두 번째 가계약까지. <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
+  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 계약까지 걸린 시간부터 두 번째 계약까지. <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
   <div class="nrj-stats">
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
       <div class="nrj-stat-v">95.5%</div>
-      <div class="nrj-stat-d">입사 11주 이내<br>첫 가계약 달성</div>
-      <div class="nrj-viz">
-        <div class="nrj-crowd"><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p b"><i></i><s></s></span><span class="nrj-p off"><i></i><s></s></span></div>
-        <div class="nrj-legend">
-          <span><em></em>5주 이내 14/22명<b>63.6%</b></span>
-          <span><em class="b"></em>11주 이내 누적 21/22명<b>95.5%</b></span>
-        </div>
+      <div class="nrj-stat-d">입사 3개월 이내<br>첫 계약 달성</div>
+      <div class="nrj-viz nrj-rates">
+        <div class="nrj-track"><i style="width:50%;background:#a8710f"></i></div>
+        <div class="nrj-axis"><span>1개월 이내 · 11/22명</span><b>50.0%</b></div>
+        <div class="nrj-track"><i style="width:81.8%;background:#cf8b18"></i></div>
+        <div class="nrj-axis"><span>2개월 이내 · 18/22명</span><b>81.8%</b></div>
+        <div class="nrj-track"><i style="width:95.5%;background:#f5a51c"></i></div>
+        <div class="nrj-axis"><span>3개월 이내 · 21/22명</span><b>95.5%</b></div>
       </div>
     </div>
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-stat-v">32일</div>
-      <div class="nrj-stat-d">입사 후 첫 가계약까지<br>걸린 기간 <small>중앙값</small></div>
+      <div class="nrj-stat-v">34일</div>
+      <div class="nrj-stat-d">입사 후 첫 계약까지<br>걸린 평균 기간</div>
       <div class="nrj-viz">
-        <div class="nrj-weeks"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="part"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="nrj-axis"><span>입사</span><span>32일 이내 <b>11/22명</b></span><span>11주</span></div>
+        <div class="nrj-tl"><span class="nrj-tl-mark" style="left:37.8%">34일</span><div class="nrj-tl-track"><i style="width:37.8%"></i><s style="left:33.33%"></s><s style="left:66.67%"></s></div></div>
+        <div class="nrj-axis"><span>입사</span><span>1개월</span><span>2개월</span><span>3개월</span></div>
       </div>
     </div>
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
       <div class="nrj-stat-v">25일</div>
-      <div class="nrj-stat-d">첫 가계약 이후<br>두 번째 가계약까지 <small>중앙값</small></div>
+      <div class="nrj-stat-d">첫 계약 이후<br>두 번째 계약까지</div>
       <div class="nrj-viz">
-        <div class="nrj-cmp">
-          <div class="nrj-cmp-row"><div class="nrj-cmp-t"><span>입사 → 첫 가계약</span><b>32일</b></div><div class="nrj-track"><i class="b" style="width:100%"></i></div></div>
-          <div class="nrj-cmp-row"><div class="nrj-cmp-t"><span>첫 → 두 번째 가계약</span><b>25일</b></div><div class="nrj-track"><i style="width:78.1%"></i></div></div>
-        </div>
+        <div class="nrj-tl"><span class="nrj-tl-mark" style="left:83.3%">25일</span><div class="nrj-tl-track"><i style="width:83.3%"></i></div></div>
+        <div class="nrj-axis"><span>첫 계약</span><span>1개월</span></div>
       </div>
     </div>
   </div>
-  <p class="nrj-note">3개월 이상 근무한 직원 22명의 과거 기록, 가계약일 기준, 파기 건 제외. <br class="nrj-pc">32일·25일은 중앙값입니다. 첫 가계약까지는 달성자 21명(평균 34일), 두 번째 가계약까지는 2건 이상 달성자 18명(평균 30.9일) 기준. 개인별 차이가 있습니다.</p>
+  <p class="nrj-note">3개월 이상 근무한 직원 22명의 과거 기록, 가계약일 기준, 파기 건 제외. 1개월 이내는 입사 후 32일 이내 기준. <br class="nrj-pc">34일은 첫 가계약 달성자 21명의 평균, 25일은 2건 이상 달성자 18명의 중앙값입니다. 개인별 차이가 있습니다.</p>
 </div>
 
 <div class="nrj-sec nrj-gray">
@@ -136,32 +113,29 @@
   <div class="nrj-acts">
     <div class="nrj-act">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-act-k">광고 등록</div>
+      <div class="nrj-act-k">1인 평균 광고 수</div>
       <div class="nrj-act-v">582<small>개</small></div>
-      <div class="nrj-act-s">1인 평균 광고 수</div>
       <div class="nrj-viz">
-        <div class="nrj-units"><i></i><i></i><i></i><i></i><i></i><i class="part" style="--f:82%"></i></div>
-        <div class="nrj-axis"><span>1칸 = 100개</span><span>582개</span></div>
+        <div class="nrj-picto"><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:82%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span></div>
+        <div class="nrj-axis"><span>아이콘 1개 = 광고 100개</span></div>
       </div>
     </div>
     <div class="nrj-act">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-act-k">문의 전화</div>
+      <div class="nrj-act-k">1일 평균 고객 유입 <span>(신규 문의)</span></div>
       <div class="nrj-act-v">5.7<small>콜</small></div>
-      <div class="nrj-act-s">1일 평균 통화</div>
       <div class="nrj-viz">
-        <div class="nrj-units"><i></i><i></i><i></i><i></i><i></i><i class="part" style="--f:70%"></i></div>
-        <div class="nrj-axis"><span>1칸 = 1콜</span><span>하루 5.7콜</span></div>
+        <div class="nrj-picto"><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:70%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span></div>
+        <div class="nrj-axis"><span>아이콘 1개 = 문의 1콜</span></div>
       </div>
     </div>
     <div class="nrj-act">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-act-k">고객 미팅</div>
+      <div class="nrj-act-k">1일 평균 고객 미팅</div>
       <div class="nrj-act-v">1.6<small>명</small></div>
-      <div class="nrj-act-s">1일 평균 미팅</div>
       <div class="nrj-viz">
-        <div class="nrj-pair"><span class="nrj-big"><i></i><s></s></span><span class="nrj-big part"><i></i><s></s></span></div>
-        <div class="nrj-axis"><span>1명 = 미팅 고객 1명</span><span>하루 1.6명</span></div>
+        <div class="nrj-picto"><span class="nrj-ic" style="width:40px;height:40px"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg></span></span><span class="nrj-ic" style="width:40px;height:40px"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg><span class="nrj-ic-on" style="width:60%"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg></span></span></div>
+        <div class="nrj-axis"><span>아이콘 1개 = 고객 1명</span></div>
       </div>
     </div>
   </div>
