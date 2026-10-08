@@ -1,0 +1,128 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>862 팩트체크·평균수입 — Fable 안</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>body{margin:0;background:#fff;font-family:Pretendard,sans-serif}</style></head><body><style>
+.nrj{max-width:860px;margin:0 auto;background:#fff;color:#1d1d1f;font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;overflow-wrap:break-word;letter-spacing:-0.01em;-webkit-text-size-adjust:100%;-webkit-user-select:none;user-select:none;line-height:1.4}
+.nrj *{box-sizing:border-box;margin:0;padding:0}
+.nrj-sec{padding:96px 48px}
+.nrj-gray{background:#f5f5f7}
+.nrj-dark{background:#000;color:#fff}
+.nrj-chip{display:inline-block;padding:10px 23px;border:2px solid #f5a51c;border-radius:999px;font-size:18px;font-weight:800;line-height:1.2}
+.nrj-h2{margin-top:24px;font-size:40px;font-weight:800;line-height:1.2;letter-spacing:-0.02em}
+.nrj-lead{margin-top:24px;font-size:21px;font-weight:500;line-height:1.5;color:#6e6e73}
+.nrj-lead b{font-weight:700}
+.nrj-dark .nrj-lead{color:#b5b5ba}
+.nrj-note{margin-top:24px;font-size:12px;font-weight:500;line-height:1.5;color:#57575c;text-align:center}
+.nrj-dark .nrj-note{color:#98989e}
+.nrj-stats{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.nrj-stat{background:#2e2e33;border:1.5px solid #55555c;border-radius:20px;padding:32px 24px;display:flex;flex-direction:column}
+.nrj-bar-accent{display:block;width:40px;height:4px;border-radius:999px;background:#f5a51c}
+.nrj-stat .nrj-bar-accent{margin:15px 0}
+.nrj-stat-v{margin-top:12px;font-size:40px;font-weight:800;line-height:1.2;color:#f5f5f7}
+.nrj-stat-d{margin-top:12px;font-size:18px;font-weight:600;line-height:1.3;color:#f5f5f7}
+.nrj-viz{margin-top:auto;padding-top:20px}
+.nrj-axis{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;font-weight:600;color:#98989e}
+.nrj-ticks{display:flex;gap:3px;height:56px;align-items:center}
+.nrj-ticks i{flex:1;height:8px;border-radius:2px;background:#f5a51c}
+.nrj-ticks i.off{background:#4a4a52}
+.nrj-people{display:flex;justify-content:space-between;height:56px;align-items:center}
+.nrj-person{width:16px}
+.nrj-person i{display:block;width:7px;height:7px;margin:0 auto 2px;border-radius:50%;background:#f5a51c}
+.nrj-person s{display:block;width:14px;height:10px;margin:0 auto;border-radius:5px 5px 2px 2px;background:#f5a51c;text-decoration:none}
+.nrj-person.off i,.nrj-person.off s{background:#4a4a52}
+/* 실제 데이터를 넣을 자리 (○) */
+.nrj-slot{display:inline-block;min-width:1.1em;padding:0 .12em;border-bottom:2px dashed #f5a51c;text-align:center}
+/* 04 첫 90일 */
+.nrj-days90{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.nrj-d90{background:#fff;border-radius:20px;padding:28px 24px;display:flex;flex-direction:column}
+.nrj-d90-m{font-size:14px;font-weight:800;color:#a8710f}
+.nrj-d90-t{margin-top:12px;font-size:22px;font-weight:800;line-height:1.35;letter-spacing:-0.02em}
+.nrj-d90-t span{display:block}
+.nrj-d90-viz{margin-top:auto;padding-top:28px}
+.nrj-d90-bar{height:64px;display:flex;align-items:flex-end}
+.nrj-d90-bar i{display:block;width:100%;height:50%;border:2px dashed #f5a51c;border-radius:10px;background:#fff7e8}
+.nrj-d90-n{margin-top:8px;font-size:13px;font-weight:700;color:#57575c}
+.nrj-d90-sub{margin-top:20px;font-size:15px;font-weight:600;color:#57575c}
+@media (max-width:600px){
+  .nrj-pc{display:none}
+  .nrj-sec{padding:64px 20px}
+  .nrj-chip{padding:8px 18px;font-size:15px}
+  .nrj-h2{margin-top:18px;font-size:30px}
+  .nrj-lead{margin-top:16px;font-size:17px}
+  .nrj-stats{grid-template-columns:1fr;gap:12px}
+  .nrj-stat{padding:24px 22px}
+  .nrj-stat .nrj-bar-accent{margin:0 0 4px}
+  .nrj-stat-v{font-size:36px}
+  .nrj-stat-d{font-size:16px}
+  .nrj-days90{margin-top:28px;grid-template-columns:1fr;gap:12px}
+  .nrj-d90{padding:22px 20px}
+  .nrj-d90-t{font-size:19px}
+  .nrj-d90-viz{padding-top:16px}
+  .nrj-d90-bar{height:40px}
+  .nrj-d90-sub{font-size:14px}
+}
+</style>
+<div class="nrj">
+
+<div class="nrj-sec nrj-dark">
+  <span class="nrj-chip">팩트체크</span>
+  <h2 class="nrj-h2">말 대신, 숫자.</h2>
+  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 계약까지 걸린 시간부터, 그 뒤의 기록까지. <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
+  <div class="nrj-stats">
+    <div class="nrj-stat">
+      <span class="nrj-bar-accent"></span>
+      <div class="nrj-stat-v">25.7일</div>
+      <div class="nrj-stat-d">입사 후 첫 계약까지<br>걸린 평균 기간</div>
+      <div class="nrj-viz">
+        <div class="nrj-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
+        <div class="nrj-axis"><span>0일</span><span>30일</span></div>
+      </div>
+    </div>
+    <div class="nrj-stat">
+      <span class="nrj-bar-accent"></span>
+      <div class="nrj-stat-v">7/10명</div>
+      <div class="nrj-stat-d">입사 1개월 이내<br>첫 계약 달성</div>
+      <div class="nrj-viz">
+        <div class="nrj-people"><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span></div>
+        <div class="nrj-axis"><span>달성 72.7%</span><span>미달성 27.3%</span></div>
+      </div>
+    </div>
+    <div class="nrj-stat">
+      <span class="nrj-bar-accent"></span>
+      <div class="nrj-stat-v" style="font-size:32px"><span class="nrj-slot">○</span>명 중 <span class="nrj-slot">○</span>명</div>
+      <div class="nrj-stat-d">첫 계약 이후에도<br>계속 근무 중</div>
+      <div class="nrj-viz">
+        <div class="nrj-people"><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span></div>
+        <div class="nrj-axis"><span>계속 근무 <span class="nrj-slot">○○</span>%</span><span>퇴사 <span class="nrj-slot">○○</span>%</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="nrj-note">25.7일 · 7/10명: 집계 기간 내 입사자 중 30일 이상 근무자 기준. 계속 근무 비율: 집계 기간 내 전체 입사자 기준.<br>(집계기간 2022년 4분기~ 2026년 2분기) 개인별 차이가 있습니다.</p>
+</div>
+
+<div class="nrj-sec nrj-gray">
+  <span class="nrj-chip">첫 90일</span>
+  <h2 class="nrj-h2">첫 90일.<br>할 수 있는 일이 늘어납니다.</h2>
+  <p class="nrj-lead">입사 후 1개월 차부터 3개월 차까지, <br class="nrj-pc">매달 맡는 일의 범위와 월평균 계약 건수입니다. 금액은 적지 않습니다.</p>
+  <div class="nrj-days90">
+    <div class="nrj-d90">
+      <div class="nrj-d90-m">1개월 차</div>
+      <div class="nrj-d90-t"><span>매물 접수·현장 확인·광고 등록</span><span>대표 동행 상담</span></div>
+      <div class="nrj-d90-viz"><div class="nrj-d90-bar"><i></i></div><div class="nrj-d90-n">월평균 <span class="nrj-slot">○</span>건</div></div>
+    </div>
+    <div class="nrj-d90">
+      <div class="nrj-d90-m">2개월 차</div>
+      <div class="nrj-d90-t"><span>단독 상담</span><span>첫 계약</span></div>
+      <div class="nrj-d90-viz"><div class="nrj-d90-bar"><i></i></div><div class="nrj-d90-n">월평균 <span class="nrj-slot">○</span>건</div></div>
+    </div>
+    <div class="nrj-d90">
+      <div class="nrj-d90-m">3개월 차</div>
+      <div class="nrj-d90-t"><span>계약서 작성부터</span><span>입주까지 마무리</span></div>
+      <div class="nrj-d90-viz"><div class="nrj-d90-bar"><i></i></div><div class="nrj-d90-n">월평균 <span class="nrj-slot">○</span>건</div></div>
+    </div>
+  </div>
+  <p class="nrj-d90-sub">담당 업무 범위는 자격(공인중개사·중개보조원)에 따라 다릅니다.</p>
+  <p class="nrj-note">3개월 이상 근무자 기준 월평균 계약 건수. 개인별 차이가 있습니다.</p>
+</div>
+
+</div>
+</body></html>
