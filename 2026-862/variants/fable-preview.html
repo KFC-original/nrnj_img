@@ -34,20 +34,21 @@
 .nrj-tl-track i{display:block;height:100%;border-radius:6px;background:#f5a51c}
 .nrj-tl-track s{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:#2e2e33;text-decoration:none}
 
-/* 04 평균 업무기록 */
-.nrj-acts{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.nrj-act{background:#fff;border-radius:20px;padding:32px 24px;display:flex;flex-direction:column}
-.nrj-act .nrj-bar-accent{margin-bottom:10px}
-.nrj-act-k{font-size:14px;font-weight:700;color:#57575c}
-.nrj-act-k span{font-weight:600;color:#8e8e93}
-.nrj-act-v{margin-top:10px;font-size:40px;font-weight:800;line-height:1.2;letter-spacing:-0.02em}
-.nrj-act-v small{margin-left:2px;font-size:22px;font-weight:800}
-.nrj-act .nrj-viz{padding-top:24px}
-.nrj-act .nrj-axis{color:#57575c}
-.nrj-picto{display:flex;gap:6px;align-items:flex-end;height:40px}
-.nrj-ic{position:relative;display:block;flex:0 0 auto}
-.nrj-ic svg{display:block}
-.nrj-ic-on{position:absolute;left:0;top:0;height:100%;overflow:hidden}
+/* 04 하루일과 */
+.nrj-day{margin-top:40px;background:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"gm gd gd" "s1 s2 s3";gap:0 24px}
+.nrj-day-g{font-size:14px;font-weight:800;color:#a8710f;padding-bottom:16px}
+.nrj-day-g.m{grid-area:gm}
+.nrj-day-g.d{grid-area:gd;padding-left:24px;border-left:1px solid #e8e8ed}
+.nrj-scene{display:flex;flex-direction:column}
+.nrj-scene.s1{grid-area:s1}
+.nrj-scene.s2{grid-area:s2;padding-left:24px;border-left:1px solid #e8e8ed}
+.nrj-scene.s3{grid-area:s3}
+.nrj-scene-svg{display:block;width:100%;max-width:200px;height:140px}
+.nrj-scene-t{margin-top:20px}
+.nrj-scene-v{font-size:20px;font-weight:800;line-height:1.3}
+.nrj-scene-k{margin-top:4px;font-size:14px;font-weight:600;color:#57575c}
+.nrj-scene-n{margin-top:10px;font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.02em}
+.nrj-scene-n small{margin-left:3px;font-size:18px;font-weight:800}
 
 @media (max-width:600px){
   .nrj-pc{display:none}
@@ -60,10 +61,16 @@
   .nrj-stat .nrj-bar-accent{margin:0 0 4px}
   .nrj-stat-v{font-size:36px}
   .nrj-stat-d{font-size:16px}
-  .nrj-acts{margin-top:28px;grid-template-columns:1fr;gap:12px}
-  .nrj-act{padding:24px 22px}
-  .nrj-act-v{font-size:36px}
-  .nrj-act .nrj-viz{padding-top:18px}
+  .nrj-day{margin-top:28px;padding:20px 20px 4px;grid-template-columns:1fr;grid-template-areas:"gm" "s1" "gd" "s2" "s3";gap:0}
+  .nrj-day-g.m,.nrj-day-g.d{padding:0 0 4px;border:0}
+  .nrj-day-g.d{margin-top:4px;padding-top:16px;border-top:1px solid #e8e8ed}
+  .nrj-scene,.nrj-scene.s2{flex-direction:row;align-items:center;gap:16px;padding:12px 0 16px;border:0}
+  .nrj-scene-svg{flex:0 0 88px;width:88px;height:62px}
+  .nrj-scene-t{margin-top:0}
+  .nrj-scene-v{font-size:15px}
+  .nrj-scene-k{font-size:13px}
+  .nrj-scene-n{margin-top:6px;font-size:28px}
+  .nrj-scene-n small{font-size:15px}
 }
 </style>
 <div class="nrj">
@@ -109,39 +116,26 @@
 </div>
 
 <div class="nrj-sec nrj-gray">
-  <span class="nrj-chip">평균 업무기록</span>
-  <h2 class="nrj-h2">결과보다 먼저,<br>과정을 공개합니다.</h2>
-  <p class="nrj-lead">노른자 팀원 1명이 평균적으로 하는 일의 양입니다. <br class="nrj-pc">광고를 올리고, 문의 전화를 받고, 고객을 만납니다.</p>
-  <div class="nrj-acts">
-    <div class="nrj-act">
-      <span class="nrj-bar-accent"></span>
-      <div class="nrj-act-k">1인 평균 광고 수</div>
-      <div class="nrj-act-v">582<small>개</small></div>
-      <div class="nrj-viz">
-        <div class="nrj-picto"><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg><span class="nrj-ic-on" style="width:82%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 3.2 2.8 10.6a1 1 0 0 0 .6 1.8H5V20a1 1 0 0 0 1 1h4.2v-5.4h3.6V21H18a1 1 0 0 0 1-1v-7.6h1.6a1 1 0 0 0 .6-1.8z"></path></svg></span></span></div>
-        <div class="nrj-axis"><span>아이콘 1개 = 광고 100개</span></div>
-      </div>
+  <span class="nrj-chip">하루일과</span>
+  <h2 class="nrj-h2">올리고, 받고, 만나고.</h2>
+  <p class="nrj-lead">노른자 팀원 한 사람이 평균적으로 하는 일입니다. <br class="nrj-pc">전화를 기다리는 사무실이 아니라, 매일 고객을 만나러 나가는 사무실입니다.</p>
+  <div class="nrj-day">
+    <div class="nrj-day-g m">한 달에</div>
+    <div class="nrj-day-g d">하루에</div>
+    <div class="nrj-scene s1">
+      <svg class="nrj-scene-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="126" x2="188" y2="126" stroke="#d6d6db" stroke-width="2"/><rect x="40" y="16" width="120" height="84" rx="7" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"/><rect x="46" y="22" width="108" height="72" rx="3" fill="#ffffff"/><rect x="52" y="30" width="26" height="15" rx="3" fill="#e8e8ed"/><rect x="52" y="48" width="16" height="3" rx="1.5" fill="#d6d6db"/><rect x="88" y="30" width="26" height="15" rx="3" fill="#e8e8ed"/><rect x="88" y="48" width="16" height="3" rx="1.5" fill="#d6d6db"/><rect x="124" y="30" width="26" height="15" rx="3" fill="#e8e8ed"/><rect x="124" y="48" width="16" height="3" rx="1.5" fill="#d6d6db"/><rect x="52" y="58" width="26" height="15" rx="3" fill="#e8e8ed"/><rect x="52" y="76" width="16" height="3" rx="1.5" fill="#d6d6db"/><rect x="88" y="58" width="26" height="15" rx="3" fill="#f5a51c"/><rect x="88" y="76" width="20" height="3" rx="1.5" fill="#f5a51c"/><rect x="124" y="58" width="26" height="15" rx="3" fill="#e8e8ed"/><rect x="124" y="76" width="16" height="3" rx="1.5" fill="#d6d6db"/><path d="M24 104h152l-8 12H32z" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="2.5"/><line x1="88" y1="109" x2="112" y2="109" stroke="#1d1d1f" stroke-width="2"/></svg>
+      <div class="nrj-scene-t"><div class="nrj-scene-v">올립니다</div><div class="nrj-scene-k">네이버부동산 광고</div><div class="nrj-scene-n">582<small>개</small></div></div>
     </div>
-    <div class="nrj-act">
-      <span class="nrj-bar-accent"></span>
-      <div class="nrj-act-k">1일 평균 고객 유입 <span>(신규 문의)</span></div>
-      <div class="nrj-act-v">5.7<small>콜</small></div>
-      <div class="nrj-viz">
-        <div class="nrj-picto"><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span><span class="nrj-ic" style="width:26px;height:26px"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg><span class="nrj-ic-on" style="width:70%"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#f5a51c" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z"></path></svg></span></span></div>
-        <div class="nrj-axis"><span>아이콘 1개 = 문의 1콜</span></div>
-      </div>
+    <div class="nrj-scene s2">
+      <svg class="nrj-scene-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="126" x2="188" y2="126" stroke="#d6d6db" stroke-width="2"/><rect x="74" y="8" width="52" height="110" rx="11" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"/><line x1="94" y1="16" x2="106" y2="16" stroke="#1d1d1f" stroke-width="2"/><rect x="84" y="26" width="32" height="5" rx="2.5" fill="#e8e8ed"/><rect x="88" y="35" width="24" height="4" rx="2" fill="#e8e8ed"/><circle cx="100" cy="66" r="15" fill="#f5a51c"/><g transform="translate(90.5 56.5) scale(0.8)"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z" fill="#ffffff"/></g><rect x="84" y="96" width="32" height="10" rx="5" fill="#e8e8ed"/><path d="M64 54a18 18 0 0 0 0 24" stroke="#f5a51c" stroke-width="2.5"/><path d="M55 47a28 28 0 0 0 0 38" stroke="#f5a51c" stroke-width="2.5"/><path d="M136 54a18 18 0 0 1 0 24" stroke="#f5a51c" stroke-width="2.5"/><path d="M145 47a28 28 0 0 1 0 38" stroke="#f5a51c" stroke-width="2.5"/></svg>
+      <div class="nrj-scene-t"><div class="nrj-scene-v">받습니다</div><div class="nrj-scene-k">신규 문의 전화</div><div class="nrj-scene-n">5.7<small>통</small></div></div>
     </div>
-    <div class="nrj-act">
-      <span class="nrj-bar-accent"></span>
-      <div class="nrj-act-k">1일 평균 고객 미팅</div>
-      <div class="nrj-act-v">1.6<small>명</small></div>
-      <div class="nrj-viz">
-        <div class="nrj-picto"><span class="nrj-ic" style="width:40px;height:40px"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg><span class="nrj-ic-on" style="width:100%"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg></span></span><span class="nrj-ic" style="width:40px;height:40px"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#e3e3e8" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg><span class="nrj-ic-on" style="width:60%"><svg width="40" height="40" viewBox="0 0 24 24"><path fill="#f5a51c" d="M12 12a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4zm0 2.2c-4.6 0-8.2 2.3-8.2 5.1V21h16.4v-1.7c0-2.8-3.6-5.1-8.2-5.1z"></path></svg></span></span></div>
-        <div class="nrj-axis"><span>아이콘 1개 = 고객 1명</span></div>
-      </div>
+    <div class="nrj-scene s3">
+      <svg class="nrj-scene-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="126" x2="192" y2="126" stroke="#d6d6db" stroke-width="2"/><rect x="18" y="14" width="60" height="112" rx="3" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="2.5"/><path d="M18 14 40 22v96l-22 8z" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"/><circle cx="35" cy="72" r="2.6" fill="#f5a51c"/><path d="M94 126v-26a19 19 0 0 1 38 0v26" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"/><path d="M98 98 74 86" stroke="#1d1d1f" stroke-width="7"/><path d="M98 98 74 86" stroke="#ffffff" stroke-width="2.5"/><path d="M75 80.5c-3.6 0-8.2 1.6-9.4 3.6-.9 1.6.6 2.8 2.4 2.5l7.4-1.2 1.6 2.2" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.2"/><circle cx="113" cy="62" r="12" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"/><rect x="117" y="100" width="9" height="6" rx="1.5" fill="#f5a51c"/><path d="M144 126v-26a19 19 0 0 1 38 0v26" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="2.5"/><circle cx="163" cy="62" r="12" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="2.5"/><path d="M151 84 177 108" stroke="#1d1d1f" stroke-width="2"/><rect x="171" y="104" width="16" height="14" rx="3" fill="#ffffff" stroke="#1d1d1f" stroke-width="2"/></svg>
+      <div class="nrj-scene-t"><div class="nrj-scene-v">만납니다</div><div class="nrj-scene-k">고객 미팅</div><div class="nrj-scene-n">1.6<small>명</small></div></div>
     </div>
   </div>
-  <p class="nrj-note">1인 평균 기준. 개인별 차이가 있습니다.</p>
+  <p class="nrj-note">팀원 1인 평균입니다. 광고는 네이버부동산에서 한 달 동안 운영하는 광고 수(다른 플랫폼 제외), 문의 전화와 고객 미팅은 하루 평균입니다. <br class="nrj-pc">개인별 차이가 있습니다. 일러스트는 업무 이해를 돕기 위한 예시입니다.</p>
 </div>
 
 </div>
