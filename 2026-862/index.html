@@ -134,8 +134,8 @@
 .nrj-team .nrj-lead{min-height:96px}
 .nrj-edu .nrj-lead{height:72px}
 
-/* mobile */
-@media (max-width:600px){
+/* mobile: 600px 이하 화면, 그리고 잡코리아 모바일처럼 휴대폰에서 960px 틀에 그린 뒤 줄여 보여 주는 경우 */
+@media (max-width:600px),(max-device-width:600px) and (min-width:900px){
   .nrj-pc{display:none}
   .nrj-sec{padding:64px 20px}
   .nrj-top{padding:24px 20px 0}
@@ -186,6 +186,10 @@
   .nrj-sign img{width:110px}
   .nrj-foot{padding:40px 20px}
   .nrj-foot img{width:200px}
+}
+/* 잡코리아 모바일은 상세요강을 960px로 그리고 약 36%로 축소한다. 이때 모바일 배치를 390px로 그려 960px로 키우면 축소 후 일반 모바일 화면과 같은 크기가 된다 */
+@media (max-device-width:600px) and (min-width:900px){
+  .nrj{width:390px;max-width:none;zoom:2.4615}
 }
 </style>
 <div class="nrj">
