@@ -38,12 +38,12 @@
 .nrj-day{margin-top:40px;background:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
 .nrj-scene{display:flex;flex-direction:column}
 .nrj-scene+.nrj-scene{padding-left:24px;border-left:1px solid #e8e8ed}
-.nrj-scene-v{font-size:22px;font-weight:800;line-height:1.3}
+.nrj-scene-v{align-self:flex-start;font-size:22px;font-weight:800;line-height:1.3;background:linear-gradient(transparent 58%,#ffd98a 58%,#ffd98a 92%,transparent 92%);padding:0 2px;margin-left:-2px}
 .nrj-scene-svg{display:block;width:100%;max-width:200px;height:140px;margin-top:16px}
 .nrj-scene-t{margin-top:16px}
 .nrj-scene-k{font-size:14px;font-weight:700;line-height:1.45;color:#57575c}
 .nrj-scene-k span{display:block;font-weight:600;color:#8e8e93}
-.nrj-scene-n{margin-top:8px;font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.02em}
+.nrj-scene-n{margin-top:8px;font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#d98a00}
 .nrj-scene-n small{margin-left:3px;font-size:18px;font-weight:800}
 
 @media (max-width:600px){
@@ -60,7 +60,7 @@
   .nrj-day{margin-top:28px;padding:8px 20px;grid-template-columns:1fr;gap:0}
   .nrj-scene,.nrj-scene+.nrj-scene{display:grid;grid-template-columns:96px 1fr;grid-template-areas:"v v" "i t";column-gap:16px;padding:20px 0;border:0;border-top:1px solid #e8e8ed}
   .nrj-scene:first-child{border-top:0}
-  .nrj-scene-v{grid-area:v;font-size:18px}
+  .nrj-scene-v{grid-area:v;justify-self:start;font-size:18px}
   .nrj-scene-svg{grid-area:i;width:96px;height:67px;margin-top:12px}
   .nrj-scene-t{grid-area:t;margin-top:12px}
   .nrj-scene-k{font-size:13px}
@@ -113,12 +113,12 @@
 <div class="nrj-sec nrj-gray">
   <span class="nrj-chip">하루일과</span>
   <h2 class="nrj-h2">올리고, 받고, 만나고.</h2>
-  <p class="nrj-lead">노른자 팀원 한 사람이 평균적으로 하는 일입니다. <br class="nrj-pc">전화를 기다리는 사무실이 아니라, 매일 고객을 만나러 나가는 사무실입니다.</p>
+  <p class="nrj-lead">노른자 팀원 한 명이 평균적으로 처리하는 일입니다. <br class="nrj-pc">다른 곳보다 바쁜 만큼 계약 확률은 더 올라갑니다.</p>
   <div class="nrj-day">
     <div class="nrj-scene">
       <div class="nrj-scene-v">올립니다.</div>
       <svg class="nrj-scene-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="126" x2="192" y2="126" stroke="#d6d6db" stroke-width="3"/><rect x="34" y="18" width="132" height="90" rx="6" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><rect x="88" y="18" width="24" height="5" rx="1.5" fill="#1d1d1f"/><rect x="44" y="31" width="112" height="9" rx="2" fill="#e8e8ed"/><circle cx="51" cy="35.5" r="2.5" fill="#f5a51c"/><rect x="44" y="46" width="34" height="50" rx="3" fill="#e8e8ed"/><g><rect x="84" y="46" width="72" height="14" rx="3" fill="#f5a51c"/><rect x="84" y="64" width="72" height="14" rx="3" fill="#e8e8ed"/><rect x="84" y="82" width="72" height="14" rx="3" fill="#e8e8ed"/><rect x="88" y="50" width="22" height="2.6" rx="1.3" fill="#ffffff"/><rect x="88" y="54.5" width="34" height="2.6" rx="1.3" fill="#ffffff"/><rect x="88" y="68" width="22" height="2.6" rx="1.3" fill="#ffffff"/><rect x="88" y="72.5" width="34" height="2.6" rx="1.3" fill="#ffffff"/><rect x="88" y="86" width="22" height="2.6" rx="1.3" fill="#ffffff"/><rect x="88" y="90.5" width="34" height="2.6" rx="1.3" fill="#ffffff"/></g><path d="M14 108h172v4a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><path d="M84 108v2a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3v-2" stroke="#1d1d1f" stroke-width="3.5"/></svg>
-      <div class="nrj-scene-t"><div class="nrj-scene-k">네이버부동산 광고<span>1인 평균 광고 운영 수</span></div><div class="nrj-scene-n">582<small>개</small></div></div>
+      <div class="nrj-scene-t"><div class="nrj-scene-k">1인 평균 광고 운영 수<span>네이버부동산 광고</span></div><div class="nrj-scene-n">582<small>개</small></div></div>
     </div>
     <div class="nrj-scene">
       <div class="nrj-scene-v">받습니다.</div>
@@ -127,7 +127,7 @@
     </div>
     <div class="nrj-scene">
       <div class="nrj-scene-v">만납니다.</div>
-      <svg class="nrj-scene-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="126" x2="192" y2="126" stroke="#d6d6db" stroke-width="3"/><path d="M10 70 40 44 70 70" stroke="#1d1d1f" stroke-width="5"/><path d="M54 56V46h9v18" stroke="#1d1d1f" stroke-width="5"/><path d="M18 63v63h44V63" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><rect x="32" y="94" width="16" height="32" rx="2" fill="#f5a51c"/><circle cx="112" cy="60" r="14" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><path d="M90 126v-22a22 22 0 0 1 44 0v22" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><path d="M107 83l5 4 5-4" stroke="#1d1d1f" stroke-width="3"/><path d="M112 87l-3.5 3 3.5 15 3.5-15z" fill="#1d1d1f"/><path d="M93 96 76 88" stroke="#1d1d1f" stroke-width="5"/><path d="M76 88c-2-3-5-4-8-3.5" stroke="#1d1d1f" stroke-width="5"/><circle cx="166" cy="60" r="14" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="5"/><path d="M144 126v-22a22 22 0 0 1 44 0v22" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="5"/></svg>
+      <svg class="nrj-scene-svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="126" x2="194" y2="126" stroke="#d6d6db" stroke-width="3"/><rect x="12" y="46" width="26" height="80" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><path d="M38 126V22l28 12v92" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><rect x="66" y="60" width="26" height="66" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><line x1="19" y1="56" x2="19" y2="61" stroke="#1d1d1f" stroke-width="3"/><line x1="27" y1="56" x2="27" y2="61" stroke="#1d1d1f" stroke-width="3"/><line x1="19" y1="68" x2="19" y2="73" stroke="#1d1d1f" stroke-width="3"/><line x1="27" y1="68" x2="27" y2="73" stroke="#1d1d1f" stroke-width="3"/><line x1="19" y1="80" x2="19" y2="85" stroke="#1d1d1f" stroke-width="3"/><line x1="27" y1="80" x2="27" y2="85" stroke="#1d1d1f" stroke-width="3"/><line x1="19" y1="92" x2="19" y2="97" stroke="#1d1d1f" stroke-width="3"/><line x1="27" y1="92" x2="27" y2="97" stroke="#1d1d1f" stroke-width="3"/><line x1="19" y1="104" x2="19" y2="109" stroke="#1d1d1f" stroke-width="3"/><line x1="27" y1="104" x2="27" y2="109" stroke="#1d1d1f" stroke-width="3"/><line x1="46" y1="40" x2="58" y2="40" stroke="#1d1d1f" stroke-width="3"/><line x1="46" y1="50" x2="58" y2="50" stroke="#1d1d1f" stroke-width="3"/><line x1="46" y1="60" x2="58" y2="60" stroke="#1d1d1f" stroke-width="3"/><line x1="46" y1="70" x2="58" y2="70" stroke="#1d1d1f" stroke-width="3"/><line x1="46" y1="80" x2="58" y2="80" stroke="#1d1d1f" stroke-width="3"/><line x1="46" y1="90" x2="58" y2="90" stroke="#1d1d1f" stroke-width="3"/><line x1="72" y1="70" x2="76" y2="70" stroke="#1d1d1f" stroke-width="3"/><line x1="81" y1="70" x2="85" y2="70" stroke="#1d1d1f" stroke-width="3"/><line x1="72" y1="80" x2="76" y2="80" stroke="#1d1d1f" stroke-width="3"/><line x1="81" y1="80" x2="85" y2="80" stroke="#1d1d1f" stroke-width="3"/><line x1="72" y1="90" x2="76" y2="90" stroke="#1d1d1f" stroke-width="3"/><line x1="81" y1="90" x2="85" y2="90" stroke="#1d1d1f" stroke-width="3"/><line x1="72" y1="100" x2="76" y2="100" stroke="#1d1d1f" stroke-width="3"/><line x1="81" y1="100" x2="85" y2="100" stroke="#1d1d1f" stroke-width="3"/><line x1="72" y1="110" x2="76" y2="110" stroke="#1d1d1f" stroke-width="3"/><line x1="81" y1="110" x2="85" y2="110" stroke="#1d1d1f" stroke-width="3"/><rect x="45" y="104" width="14" height="22" rx="1.5" fill="#f5a51c"/><path d="M104 18h40a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5h-15l-5 7-5-7h-15a5 5 0 0 1-5-5V23a5 5 0 0 1 5-5z" fill="#ffffff" stroke="#1d1d1f" stroke-width="4"/><path d="M116 37l8-7 8 7v10h-16z" fill="#f5a51c"/><path d="M153 30h30a5 5 0 0 1 5 5v15a5 5 0 0 1-5 5h-8l-5 6-5-6h-12a5 5 0 0 1-5-5V35a5 5 0 0 1 5-5z" fill="#ffffff" stroke="#1d1d1f" stroke-width="4"/><circle cx="161" cy="42.5" r="2.6" fill="#1d1d1f"/><circle cx="168" cy="42.5" r="2.6" fill="#1d1d1f"/><circle cx="175" cy="42.5" r="2.6" fill="#1d1d1f"/><circle cx="124" cy="80" r="10" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><path d="M107 126v-14a17 17 0 0 1 34 0v14" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/><path d="M124 97l-3 2.6 3 12 3-12z" fill="#1d1d1f"/><circle cx="170" cy="80" r="10" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="5"/><path d="M153 126v-14a17 17 0 0 1 34 0v14" fill="#e8e8ed" stroke="#1d1d1f" stroke-width="5"/></svg>
       <div class="nrj-scene-t"><div class="nrj-scene-k">1인 하루 평균<span>미팅 고객 수</span></div><div class="nrj-scene-n">1.8<small>명</small></div></div>
     </div>
   </div>
