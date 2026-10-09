@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<line x1="12" y1="126" x2="188" y2="126" stroke="#d6d6db" stroke-width="2"/>
-<rect x="74" y="8" width="52" height="110" rx="11" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"/>
-<line x1="94" y1="16" x2="106" y2="16" stroke="#1d1d1f" stroke-width="2"/>
-<rect x="84" y="26" width="32" height="5" rx="2.5" fill="#e8e8ed"/>
-<rect x="88" y="35" width="24" height="4" rx="2" fill="#e8e8ed"/>
-<circle cx="100" cy="66" r="15" fill="#f5a51c"/>
-<g transform="translate(90.5 56.5) scale(0.8)"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z" fill="#ffffff"/></g>
-<rect x="84" y="96" width="32" height="10" rx="5" fill="#e8e8ed"/>
-<path d="M64 54a18 18 0 0 0 0 24" stroke="#f5a51c" stroke-width="2.5"/>
-<path d="M55 47a28 28 0 0 0 0 38" stroke="#f5a51c" stroke-width="2.5"/>
-<path d="M136 54a18 18 0 0 1 0 24" stroke="#f5a51c" stroke-width="2.5"/>
-<path d="M145 47a28 28 0 0 1 0 38" stroke="#f5a51c" stroke-width="2.5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="140" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="126" x2="192" y2="126" stroke="#d6d6db" stroke-width="3"/>
+<rect x="74" y="8" width="52" height="110" rx="11" fill="#ffffff" stroke="#1d1d1f" stroke-width="5"/>
+<rect x="92" y="13" width="16" height="5" rx="2.5" fill="#1d1d1f"/>
+<rect x="84" y="28" width="32" height="5" rx="2.5" fill="#e8e8ed"/>
+<rect x="88" y="37" width="24" height="4" rx="2" fill="#e8e8ed"/>
+<circle cx="100" cy="68" r="15" fill="#f5a51c"/>
+<g transform="translate(90.5 58.5) scale(0.8)"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.12.37 2.33.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.57a1 1 0 0 1-.25 1z" fill="#ffffff"/></g>
+<rect x="84" y="98" width="32" height="10" rx="5" fill="#e8e8ed"/>
+<path d="M62 56a18 18 0 0 0 0 24" stroke="#f5a51c" stroke-width="5"/>
+<path d="M52 48a30 30 0 0 0 0 40" stroke="#f5a51c" stroke-width="5"/>
+<path d="M138 56a18 18 0 0 1 0 24" stroke="#f5a51c" stroke-width="5"/>
+<path d="M148 48a30 30 0 0 1 0 40" stroke="#f5a51c" stroke-width="5"/></svg>
