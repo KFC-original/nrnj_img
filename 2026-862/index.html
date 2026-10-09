@@ -26,33 +26,38 @@
 .nrj-hero-img{width:100%;aspect-ratio:860/576;object-fit:cover}
 
 /* 02 fact */
-.nrj-stats{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.nrj-stats{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .nrj-stat{background:#2e2e33;border:1.5px solid #55555c;border-radius:20px;padding:32px 24px;display:flex;flex-direction:column}
 .nrj-bar-accent{display:block;width:40px;height:4px;border-radius:999px;background:#f5a51c}
 .nrj-stat .nrj-bar-accent{margin:15px 0 15px}
 .nrj-stat-v{margin-top:12px;font-size:40px;font-weight:800;line-height:1.2;color:#f5f5f7}
 .nrj-stat-d{margin-top:12px;font-size:18px;font-weight:600;line-height:1.3;color:#f5f5f7}
+.nrj-stat-d small{margin-left:8px;font-size:14px;font-weight:600;color:#98989e;white-space:nowrap}
 .nrj-viz{margin-top:auto;padding-top:20px}
-.nrj-axis{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;font-weight:600;color:#98989e}
+.nrj-axis{display:flex;justify-content:space-between;gap:8px;margin-top:8px;font-size:11px;font-weight:600;color:#98989e}
 .nrj-axis b{font-weight:700}
-.nrj-ticks{display:flex;gap:3px;height:56px;align-items:center}
-.nrj-ticks i{flex:1;height:8px;border-radius:2px;background:#f5a51c}
-.nrj-ticks i.off{background:#4a4a52}
-.nrj-people{display:flex;justify-content:space-between;height:56px;align-items:center}
-.nrj-person{width:16px}
-.nrj-person i{display:block;width:7px;height:7px;margin:0 auto 2px;border-radius:50%;background:#f5a51c}
-.nrj-person s{display:block;width:14px;height:10px;margin:0 auto;border-radius:5px 5px 2px 2px;background:#f5a51c;text-decoration:none}
-.nrj-person.off i,.nrj-person.off s{background:#4a4a52}
-.nrj-track{display:flex;height:12px;border-radius:6px;overflow:hidden;background:#4a4a52}
+.nrj-stat .nrj-axis b{color:#f5f5f7}
+.nrj-track{height:12px;border-radius:6px;overflow:hidden;background:#4a4a52}
 .nrj-track i{display:block;height:100%;border-radius:6px;background:#f5a51c}
-.nrj-track+.nrj-axis{margin-top:8px;margin-bottom:9px}
+.nrj-track+.nrj-axis{margin-top:6px;margin-bottom:10px}
+.nrj-rates .nrj-axis:last-child{margin-bottom:0}
+.nrj-tl{position:relative;padding-top:24px}
+.nrj-tl-mark{position:absolute;top:0;transform:translateX(-50%);font-size:13px;font-weight:800;color:#f5a51c;white-space:nowrap}
+.nrj-tl-track{position:relative;height:12px;border-radius:6px;background:#4a4a52;overflow:hidden}
+.nrj-tl-track i{display:block;height:100%;border-radius:6px;background:#f5a51c}
+.nrj-tl-track s{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:#2e2e33;text-decoration:none}
 
-/* 04 income */
-.nrj-income{margin-top:24px;padding-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:end;height:394px}
-.nrj-col{display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
-.nrj-col-v{font-size:24px;font-weight:800}
-.nrj-col-bar{width:100%;margin-top:12px;border-radius:14px}
-.nrj-col-x{margin-top:12px;font-size:14px;font-weight:600;color:#6e6e73}
+/* 04 day */
+.nrj-day{margin-top:40px;background:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
+.nrj-scene{display:flex;flex-direction:column}
+.nrj-scene+.nrj-scene{padding-left:24px;border-left:1px solid #e8e8ed}
+.nrj-scene-v{align-self:flex-start;font-size:22px;font-weight:800;line-height:1.3;background:linear-gradient(transparent 58%,#ffd98a 58%,#ffd98a 92%,transparent 92%);padding:0 2px;margin-left:-2px}
+.nrj .nrj-scene-img{width:100%;max-width:200px;height:140px;margin-top:16px;object-fit:contain;object-position:left center}
+.nrj-scene-t{margin-top:16px}
+.nrj-scene-k{font-size:14px;font-weight:700;line-height:1.45;color:#57575c}
+.nrj-scene-k span{display:block;font-weight:600;color:#8e8e93}
+.nrj-scene-n{margin-top:8px;font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#1d1d1f}
+.nrj-scene-n small{margin-left:3px;font-size:18px;font-weight:800}
 
 /* 05 edu steps */
 .nrj-steps{margin-top:48px;border-top:1px solid #d6d6db}
@@ -139,10 +144,15 @@
   .nrj-stat .nrj-bar-accent{margin:0 0 4px}
   .nrj-stat-v{font-size:36px}
   .nrj-stat-d{font-size:16px}
-  .nrj-income{height:300px;gap:10px}
-  .nrj-col-v{font-size:19px}
-  .nrj-col-bar{border-radius:10px}
-  .nrj-col-x{font-size:13px}
+  .nrj-day{margin-top:28px;padding:8px 20px;grid-template-columns:1fr;gap:0}
+  .nrj-scene,.nrj-scene+.nrj-scene{display:grid;grid-template-columns:96px 1fr;grid-template-areas:"v v" "i t";column-gap:16px;padding:20px 0;border:0;border-top:1px solid #e8e8ed}
+  .nrj-scene:first-child{border-top:0}
+  .nrj-scene-v{grid-area:v;justify-self:start;font-size:18px}
+  .nrj .nrj-scene-img{grid-area:i;width:96px;height:67px;margin-top:12px}
+  .nrj-scene-t{grid-area:t;margin-top:12px}
+  .nrj-scene-k{font-size:13px}
+  .nrj-scene-n{margin-top:4px;font-size:30px}
+  .nrj-scene-n small{font-size:15px}
   .nrj-steps{margin-top:32px}
   .nrj-step{gap:10px;padding:22px 0}
   .nrj-step-no{flex-basis:20px;font-size:13px;line-height:1.8}
@@ -184,57 +194,71 @@
 <div class="nrj-sec nrj-dark">
   <span class="nrj-chip">팩트체크</span>
   <h2 class="nrj-h2">말 대신, 숫자.</h2>
-  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 계약까지의 시간부터 월 실수령액까지 <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
+  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 계약까지 걸린 시간부터 두 번째 계약까지 <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
   <div class="nrj-stats">
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-stat-v">25.7일</div>
+      <div class="nrj-stat-v">34일</div>
       <div class="nrj-stat-d">입사 후 첫 계약까지<br>걸린 평균 기간</div>
       <div class="nrj-viz">
-        <div class="nrj-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
-        <div class="nrj-axis"><span>0일</span><span>30일</span></div>
+        <div class="nrj-tl"><span class="nrj-tl-mark" style="left:37.8%">34일</span><div class="nrj-tl-track"><i style="width:37.8%"></i><s style="left:33.33%"></s><s style="left:66.67%"></s></div></div>
+        <div class="nrj-axis"><span>입사</span><span>1개월</span><span>2개월</span><span>3개월</span></div>
       </div>
     </div>
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-stat-v">7/10명</div>
-      <div class="nrj-stat-d">입사 1개월 이내<br>첫 계약 달성</div>
-      <div class="nrj-viz">
-        <div class="nrj-people"><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span><span class="nrj-person off"><i></i><s></s></span></div>
-        <div class="nrj-axis"><span>달성 72.7%</span><span>미달성 27.3%</span></div>
+      <div class="nrj-stat-v">95.5%</div>
+      <div class="nrj-stat-d">입사 3개월 이내<br>첫 계약 달성<small>22명 중 21명</small></div>
+      <div class="nrj-viz nrj-rates">
+        <div class="nrj-track"><i style="width:50%;background:#a8710f"></i></div>
+        <div class="nrj-axis"><span>1개월 이내 · 11/22명</span><b>50.0%</b></div>
+        <div class="nrj-track"><i style="width:81.8%;background:#cf8b18"></i></div>
+        <div class="nrj-axis"><span>2개월 이내 · 18/22명</span><b>81.8%</b></div>
+        <div class="nrj-track"><i style="width:95.5%;background:#f5a51c"></i></div>
+        <div class="nrj-axis"><span>3개월 이내 · 21/22명</span><b>95.5%</b></div>
       </div>
     </div>
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
-      <div class="nrj-stat-v">38.6%</div>
-      <div class="nrj-stat-d">월 실수령 1000만원<br>달성자 비율</div>
+      <div class="nrj-stat-v">25일</div>
+      <div class="nrj-stat-d">첫 계약 이후 두 번째<br>계약까지 걸린 기간</div>
       <div class="nrj-viz">
-        <div class="nrj-track"><i style="width:38.6%"></i></div>
-        <div class="nrj-axis"><span>1000만 원 이상</span><b>38.6%</b></div>
-        <div class="nrj-track"><i style="width:53.9%;background:#a8710f"></i></div>
-        <div class="nrj-axis"><span>500만 원 이상</span><b>53.9%</b></div>
+        <div class="nrj-tl"><span class="nrj-tl-mark" style="left:83.3%">25일</span><div class="nrj-tl-track"><i style="width:83.3%"></i></div></div>
+        <div class="nrj-axis"><span>첫 계약</span><span>1개월</span></div>
       </div>
     </div>
   </div>
-  <p class="nrj-note">집계 기간 내 입사자 중 30일 이상 근무자 기준. 총매출이 아닌, 순수 개인 실수령액. (집계기간 2022년 4분기~ 2026년 2분기)</p>
+  <p class="nrj-note">집계 기간 내 입사자 중 3개월 이상 근무자 기준 (집계 기간 2022년 4분기~2026년 2분기)</p>
 </div>
 
 <div class="nrj-sec nrj-gray">
-  <span class="nrj-chip">평균수입</span>
-  <h2 class="nrj-h2">첫 3개월.<br>성장의 흐름을 보다.</h2>
-  <p class="nrj-lead">입사 후 1개월 차부터 3개월 차까지의 월별 평균 개인 실수령액입니다. <br class="nrj-pc">누적 금액이 아닌, 각 개월 차에 실제로 수령한 금액을 기준으로 계산했습니다.</p>
-  <div class="nrj-income">
-    <div class="nrj-col"><div class="nrj-col-v">195만</div><div class="nrj-col-bar" style="height:27%;background:#ffd98a"></div><div class="nrj-col-x">1개월 차</div></div>
-    <div class="nrj-col"><div class="nrj-col-v">428만</div><div class="nrj-col-bar" style="height:62%;background:#f7bc55"></div><div class="nrj-col-x">2개월 차</div></div>
-    <div class="nrj-col"><div class="nrj-col-v">631만</div><div class="nrj-col-bar" style="height:100%;background:#f5a51c"></div><div class="nrj-col-x">3개월 차</div></div>
+  <span class="nrj-chip">하루일과</span>
+  <h2 class="nrj-h2">올리고, 받고, 만나고.</h2>
+  <p class="nrj-lead">불경기에도 노른자는 바쁘게 돌아갑니다. <br class="nrj-pc">우리만의 광고 전략이 많은 전화를 부르고, 그 전화가 미팅으로 이어집니다.</p>
+  <div class="nrj-day">
+    <div class="nrj-scene">
+      <div class="nrj-scene-v">올립니다.</div>
+      <img class="nrj-scene-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.09-862b/2026-862/illust/ad.svg" width="200" height="140" alt="매물 광고가 올라간 노트북 화면">
+      <div class="nrj-scene-t"><div class="nrj-scene-k">1인 평균 광고 운영 수<span>네이버부동산 광고</span></div><div class="nrj-scene-n">582<small>개</small></div></div>
+    </div>
+    <div class="nrj-scene">
+      <div class="nrj-scene-v">받습니다.</div>
+      <img class="nrj-scene-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.09-862b/2026-862/illust/call.svg" width="200" height="140" alt="문의 전화가 울리는 휴대폰">
+      <div class="nrj-scene-t"><div class="nrj-scene-k">1인 하루 평균<span>신규 문의 전화</span></div><div class="nrj-scene-n">5.7<small>콜</small></div></div>
+    </div>
+    <div class="nrj-scene">
+      <div class="nrj-scene-v">만납니다.</div>
+      <img class="nrj-scene-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.09-862b/2026-862/illust/meet.svg" width="200" height="140" alt="건물이 그려진 말풍선과 손을 들어 인사하는 직원, 고객">
+      <div class="nrj-scene-t"><div class="nrj-scene-k">1인 하루 평균<span>미팅 고객 수</span></div><div class="nrj-scene-n">1.8<small>명</small></div></div>
+    </div>
   </div>
-  <p class="nrj-note">집계 기간 내 입사자 중 3개월 이상 근무자 기준. 총매출이 아닌, 순수 개인 실수령액. (집계기간 2022년 4분기~ 2026년 2분기)</p>
+  <p class="nrj-note">광고 운영 수는 네이버부동산에서 1인이 한 달 동안 운영하는 광고의 평균(다른 플랫폼 제외), <br class="nrj-pc">신규 문의 전화와 미팅 고객 수는 1인 하루 평균으로 개인별 차이가 있습니다. <br class="nrj-pc">(집계 기간 2025년 1분기~2026년 2분기, 자체 시장 동향 분석으로 불경기로 판정한 기간)</p>
 </div>
 
 <div class="nrj-sec">
   <span class="nrj-chip">교육</span>
   <h2 class="nrj-h2">대표가 직접.<br>모르는 게 없을 때까지.</h2>
-  <p class="nrj-lead">계약에 필요한 실무와 영업의 핵심을 <br class="nrj-pc">진도가 아닌 개인의 이해도에 맞춰 꼼꼼하게 알려드립니다. <br class="nrj-pc">기본부터 첫 계약까지, 대표가 함께 합니다.</p>
+  <p class="nrj-lead">계약에 필요한 실무와 영업의 핵심을 <br class="nrj-pc">진도가 아닌 개인의 이해도에 맞춰 꼼꼼하게 알려드립니다. <br class="nrj-pc">기본부터 첫 계약까지, 대표가 함께합니다.</p>
   <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/edu.webp" alt="대표와 1:1로 상권 지도를 보며 배우는 교육 장면">
   <div class="nrj-steps">
     <div class="nrj-step"><div class="nrj-step-no">01</div><div><h3 class="nrj-step-t">기본. 직접 체험하는 중개의 모든 과정.</h3><p class="nrj-step-b">매물 접수, 현장 확인, 사진 촬영, 광고 등록, 고객 응대, 그리고 계약. <br>모든 단계를 직접 체험하며 일이 어떤 순서로 이어지는지, 그 순간 무엇을 판단해야 하는지를 익힙니다. <br>정해진 일을 따라 하는 데서 멈추지 않습니다. <br>왜 그렇게 하는지 이해해야 혼자서도 매물 하나를 맡아 계약으로 끝낼 수 있습니다. <br>그 기본기를 여기서 만듭니다.</p></div></div>
@@ -246,7 +270,7 @@
 <div class="nrj-sec nrj-gray nrj-work">
   <span class="nrj-chip">업무방식</span>
   <h2 class="nrj-h2">몸이 아닌 머리로.<br>감이 아닌 데이터로.</h2>
-  <p class="nrj-lead">노른자만의 누적된 데이터로 매물과 고객을 먼저 분석해 계약확률은 높이고, <br class="nrj-pc">무작정 돌아다니는 불필요한 업무는 줄입니다. <br class="nrj-pc">반복 업무는 시스템에 맡기고, 상담과 계약에 집중합니다.</p>
+  <p class="nrj-lead">노른자만의 누적된 데이터로 매물과 고객을 먼저 분석해 계약 확률은 높이고, <br class="nrj-pc">무작정 돌아다니는 불필요한 업무는 줄입니다. <br class="nrj-pc">반복 업무는 시스템에 맡기고, 상담과 계약에 집중합니다.</p>
   <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/work.webp" alt="듀얼 모니터로 상권 지도와 데이터를 분석하는 모습">
 </div>
 
@@ -255,7 +279,7 @@
   <h2 class="nrj-h2">업무는 짧게.<br>휴식은 길게.</h2>
   <div class="nrj-cards">
     <div class="nrj-card">
-      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무일</div><div class="nrj-card-v">주 5일</div><div class="nrj-card-s">월–금 · 토, 일, 공휴일 휴무</div>
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무일</div><div class="nrj-card-v">주 5일</div><div class="nrj-card-s">월–금 · 토·일·공휴일 휴무</div>
       <div class="nrj-viz"><div class="nrj-days"><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="off">토</span><span class="off">일</span></div><div class="nrj-axis"><span>주 5일 근무</span><span>토·일·공휴일 휴무</span></div></div>
     </div>
     <div class="nrj-card">
@@ -275,17 +299,17 @@
       <div class="nrj-viz"><div class="nrj-inc"><div class="nrj-inc-y">수<br>익</div><div class="nrj-inc-plot"><i style="height:26%;background:#ffce80"></i><i style="height:44%;background:#fdc467"></i><i style="height:63%;background:#faba4e"></i><i style="height:81%;background:#f8af35"></i><i style="height:100%;background:#f5a51c"></i></div></div><div class="nrj-inc-x">실적</div></div>
     </div>
     <div class="nrj-card">
-      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무지</div><div class="nrj-card-v">홍대・신촌</div><div class="nrj-card-s">사무실, 출· 퇴근 편한 홍대입구역, 신촌역 중앙에 위치</div>
+      <span class="nrj-bar-accent"></span><div class="nrj-card-k">근무지</div><div class="nrj-card-v">홍대·신촌</div><div class="nrj-card-s">사무실, 출퇴근 편한 홍대입구역, 신촌역 중앙에 위치</div>
       <div class="nrj-viz"><div class="nrj-loc"><i></i><s></s><b></b><s></s><i></i></div><div class="nrj-axis"><span>홍대입구역</span><span>신촌역</span></div></div>
     </div>
   </div>
-  <div class="nrj-perks"><div class="nrj-perk">목표달성 프로모션</div><div class="nrj-perk">생일 축하선물</div><div class="nrj-perk">경조사비</div><div class="nrj-perk">근속 감사금</div></div>
+  <div class="nrj-perks"><div class="nrj-perk">목표 달성 프로모션</div><div class="nrj-perk">생일 축하 선물</div><div class="nrj-perk">경조사비</div><div class="nrj-perk">근속 감사금</div></div>
 </div>
 
 <div class="nrj-sec nrj-dark">
   <span class="nrj-chip">팀문화</span>
   <h2 class="nrj-h2">경쟁 대신 협력.</h2>
-  <p class="nrj-lead"><b>시작할땐 혼자여도, 일할땐 혼자가 되지 않도록.</b> <br class="nrj-pc">매물도, 정보도, 노하우도 전부 나눕니다. <br class="nrj-pc">혼자 잘하는 사람보다 함께 이기는 팀을 지향합니다.</p>
+  <p class="nrj-lead"><b>시작할 땐 혼자여도, 일할 땐 혼자가 되지 않도록.</b> <br class="nrj-pc">매물도, 정보도, 노하우도 전부 나눕니다. <br class="nrj-pc">혼자 잘하는 사람보다 함께 이기는 팀을 지향합니다.</p>
   <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/team.webp" alt="같은 박자로 노를 젓는 조정 팀">
 </div>
 
