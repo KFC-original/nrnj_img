@@ -5,6 +5,7 @@
 @font-face{font-family:"Pretendard";font-style:normal;font-weight:500;font-display:swap;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/Pretendard-Medium.subset.woff2) format("woff2")}
 @font-face{font-family:"Pretendard";font-style:normal;font-weight:800;font-display:swap;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2-subset/Pretendard-ExtraBold.subset.woff2) format("woff2")}
 .nrj{max-width:860px;margin:0 auto;background:#fff;color:#1d1d1f;font-family:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:16px;word-break:keep-all;overflow-wrap:break-word;letter-spacing:-0.01em;-webkit-text-size-adjust:100%;-webkit-user-select:none;user-select:none;line-height:1.4}
+.nrj br.nrj-mo{display:none}
 .nrj *{box-sizing:border-box;margin:0;padding:0}
 .nrj img{display:block;max-width:100%;border:0;-webkit-user-drag:none;pointer-events:none}
 .nrj-sec{padding:96px 48px}
@@ -137,6 +138,7 @@
 /* mobile: 600px 이하 화면, 그리고 잡코리아 모바일처럼 휴대폰에서 960px 틀에 그린 뒤 줄여 보여 주는 경우 */
 @media (max-width:600px),(max-device-width:600px) and (min-width:900px){
   .nrj-pc{display:none}
+  .nrj br.nrj-mo{display:inline}
   .nrj-sec{padding:64px 20px}
   .nrj-top{padding:24px 20px 0}
   .nrj-top img{width:128px;margin-top:12px}
@@ -168,7 +170,6 @@
   .nrj-step-no{flex-basis:20px;font-size:13px;line-height:1.8}
   .nrj-step-t{font-size:19px;line-height:1.3}
   .nrj .nrj-step-b{font-size:15px;line-height:23px}
-  .nrj-step-b br{display:none}
   .nrj-cards{grid-template-columns:1fr;gap:12px}
   .nrj-card{padding:24px 22px}
   .nrj-card-v{font-size:32px}
@@ -191,6 +192,10 @@
 @media (max-device-width:600px) and (min-width:900px){
   .nrj{width:390px;max-width:none;zoom:2.4615}
 }
+/* 사람인 모바일은 휴대폰 폭보다 약 63px 좁은 틀에 넣는다(390px 폰 → 327px). 줄바꿈은 327px 기준으로 맞췄고, 그보다 좁으면 통째로 줄여 같은 줄바꿈을 유지한다 */
+@media (max-width:326px){.nrj{zoom:.9}}
+@media (max-width:293px){.nrj{zoom:.8}}
+@media (max-width:261px){.nrj{zoom:.7}}
 </style>
 <div class="nrj">
 
@@ -200,14 +205,14 @@
 </div>
 <div class="nrj-hero">
   <h1 class="nrj-h1">시작이 전부.</h1>
-  <p class="nrj-lead">같은 사람도, 어디서 시작하느냐에 따라 <br class="nrj-pc">결과는 완전히 달라집니다.</p>
+  <p class="nrj-lead">같은 사람도, 어디서 시작하느냐에 따라 <br>결과는 완전히 달라집니다.</p>
 </div>
 <img class="nrj-hero-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/hero.webp" alt="START 버튼을 누르는 손">
 
 <div class="nrj-sec nrj-dark nrj-fact">
   <span class="nrj-chip">팩트체크</span>
   <h2 class="nrj-h2">말 대신, 숫자.</h2>
-  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br class="nrj-pc">첫 계약까지 걸린 시간부터 두 번째 계약까지 <br class="nrj-pc">노른자에서 먼저 시작한 팀원들의 기록입니다.</p>
+  <p class="nrj-lead"><b>가능성을 보여주는, 실제 기록.</b> <br>첫 계약까지 걸린 시간부터 두 번째 계약까지 <br>노른자에서 먼저 시작한 <br class="nrj-mo">팀원들의 기록입니다.</p>
   <div class="nrj-stats">
     <div class="nrj-stat">
       <span class="nrj-bar-accent"></span>
@@ -241,13 +246,13 @@
       </div>
     </div>
   </div>
-  <p class="nrj-note">집계 기간 내 입사자 중 3개월 이상 근무자 기준 (집계 기간 2022년 4분기~2026년 2분기)</p>
+  <p class="nrj-note">집계 기간 내 입사자 중 3개월 이상 근무자 기준 <br class="nrj-mo">(집계 기간 2022년 4분기~2026년 2분기)</p>
 </div>
 
 <div class="nrj-sec nrj-gray nrj-daysec">
   <span class="nrj-chip">하루일과</span>
   <h2 class="nrj-h2">올리고, 받고, 만나고.</h2>
-  <p class="nrj-lead">불경기에도 노른자는 바쁘게 돌아갑니다. <br class="nrj-pc">우리만의 광고 전략이 많은 전화를 부르고, <br class="nrj-pc">그 전화가 미팅으로 이어집니다.</p>
+  <p class="nrj-lead">불경기에도 노른자는 바쁘게 돌아갑니다. <br>우리만의 광고 전략이 많은 전화를 부르고, <br>그 전화가 미팅으로 이어집니다.</p>
   <div class="nrj-day">
     <div class="nrj-scene">
       <div class="nrj-scene-v">올립니다.</div>
@@ -265,25 +270,25 @@
       <div class="nrj-scene-t"><div class="nrj-scene-k">1인 하루 평균<span>미팅 고객 수</span></div><div class="nrj-scene-n">1.8<small>명</small></div></div>
     </div>
   </div>
-  <p class="nrj-note">광고 운영 수는 네이버부동산에서 1인이 한 달 동안 운영하는 광고의 평균(다른 플랫폼 제외), <br class="nrj-pc">신규 문의 전화와 미팅 고객 수는 1인 하루 평균으로 개인별 차이가 있습니다. <br class="nrj-pc">(집계 기간 2025년 1분기~2026년 2분기, 자체 시장 동향 분석으로 불경기로 판정한 기간)</p>
+  <p class="nrj-note">광고 운영 수는 네이버부동산에서 1인이 한 달 동안 <br class="nrj-mo">운영하는 광고의 평균(다른 플랫폼 제외), <br>신규 문의 전화와 미팅 고객 수는 1인 하루 평균으로 <br class="nrj-mo">개인별 차이가 있습니다. <br>(집계 기간 2025년 1분기~2026년 2분기, <br class="nrj-mo">자체 시장 동향 분석으로 불경기로 판정한 기간)</p>
 </div>
 
 <div class="nrj-sec nrj-edu">
   <span class="nrj-chip">교육</span>
   <h2 class="nrj-h2">대표가 직접.<br>모르는 게 없을 때까지.</h2>
-  <p class="nrj-lead">계약에 필요한 실무와 영업의 핵심을 <br class="nrj-pc">진도가 아닌 개인의 이해도에 맞춰 꼼꼼하게 알려드립니다. <br class="nrj-pc">기본부터 첫 계약까지, 대표가 함께합니다.</p>
+  <p class="nrj-lead">계약에 필요한 실무와 영업의 핵심을 <br>진도가 아닌 개인의 이해도에 맞춰 <br class="nrj-mo">꼼꼼하게 알려드립니다. <br>기본부터 첫 계약까지, 대표가 함께합니다.</p>
   <img class="nrj-photo nrj-edu-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/edu.webp" alt="대표와 1:1로 상권 지도를 보며 배우는 교육 장면">
   <div class="nrj-steps">
-    <div class="nrj-step"><div class="nrj-step-no">01</div><div><h3 class="nrj-step-t">기본. 직접 체험하는 중개의 모든 과정.</h3><p class="nrj-step-b">매물 접수, 현장 확인, 사진 촬영, 광고 등록, 고객 응대, 그리고 계약. <br>모든 단계를 직접 체험하며 일이 어떤 순서로 이어지는지, 그 순간 무엇을 판단해야 하는지를 익힙니다. <br>정해진 일을 따라 하는 데서 멈추지 않습니다. <br>왜 그렇게 하는지 이해해야 혼자서도 매물 하나를 맡아 계약으로 끝낼 수 있습니다. <br>그 기본기를 여기서 만듭니다.</p></div></div>
-    <div class="nrj-step"><div class="nrj-step-no">02</div><div><h3 class="nrj-step-t">실전. 전화 한 통을 계약으로 바꾸는 법.</h3><p class="nrj-step-b">콜이 끊이지 않는 광고 방법에서 시작합니다. <br>전화 문의를 실제 미팅으로 바꾸는 상담, 고객이 진짜 원하는 조건을 읽어내는 질문, <br>조건을 맞춰가는 협상, 한 번의 상담을 계약으로 연결하는 클로징을 익힙니다. <br>중개의 전 과정을 대표가 단계마다 직접 확인하고, 부족한 부분을 하나하나 짚어 피드백합니다. <br>단순히 매물을 소개하는 중개가 아니라, 고객을 움직여 계약을 만들어내는 진짜 중개를 배웁니다.</p></div></div>
-    <div class="nrj-step"><div class="nrj-step-no">03</div><div><h3 class="nrj-step-t">성장. 계약이 계약을 부르다.</h3><p class="nrj-step-b">중개 사고를 막는 계약서 작성부터 입주까지, 계약을 완성도 있게 마무리하는 법을 익힙니다. <br>계약이 끝난 뒤에도 고객과의 관계를 이어갑니다. <br>사업장을 넓히고, 옮기고, 두 번째 매장을 내는 2차 계약은 물론 <br>기존 고객의 소개가 또 다른 계약으로 이어지는, 끊이지 않는 영업 구조를 만듭니다. <br>광고로 온 고객은 비교하고 오지만, 소개로 온 고객은 믿고 오기에 계약 확률은 더 높아집니다.</p></div></div>
+    <div class="nrj-step"><div class="nrj-step-no">01</div><div><h3 class="nrj-step-t">기본. <br class="nrj-mo">직접 체험하는 중개의 모든 과정.</h3><p class="nrj-step-b">매물 접수, 현장 확인, 사진 촬영, <br class="nrj-mo">광고 등록, 고객 응대, 그리고 계약. <br>모든 단계를 직접 체험하며 <br class="nrj-mo">일이 어떤 순서로 이어지는지, <br class="nrj-mo">그 순간 무엇을 판단해야 하는지를 익힙니다. <br>정해진 일을 따라 하는 데서 멈추지 않습니다. <br>왜 그렇게 하는지 이해해야 <br class="nrj-mo">혼자서도 매물 하나를 맡아 <br class="nrj-mo">계약으로 끝낼 수 있습니다. <br>그 기본기를 여기서 만듭니다.</p></div></div>
+    <div class="nrj-step"><div class="nrj-step-no">02</div><div><h3 class="nrj-step-t">실전. <br class="nrj-mo">전화 한 통을 계약으로 바꾸는 법.</h3><p class="nrj-step-b">콜이 끊이지 않는 광고 방법에서 시작합니다. <br>전화 문의를 실제 미팅으로 바꾸는 상담, <br class="nrj-mo">고객이 진짜 원하는 조건을 읽어내는 질문, <br>조건을 맞춰가는 협상, 한 번의 상담을 <br class="nrj-mo">계약으로 연결하는 클로징을 익힙니다. <br>중개의 전 과정을 대표가 단계마다 <br class="nrj-mo">직접 확인하고, 부족한 부분을 <br class="nrj-mo">하나하나 짚어 피드백합니다. <br>단순히 매물을 소개하는 중개가 아니라, <br class="nrj-mo">고객을 움직여 계약을 만들어내는 <br class="nrj-mo">진짜 중개를 배웁니다.</p></div></div>
+    <div class="nrj-step"><div class="nrj-step-no">03</div><div><h3 class="nrj-step-t">성장. <br class="nrj-mo">계약이 계약을 부르다.</h3><p class="nrj-step-b">중개 사고를 막는 계약서 작성부터 <br class="nrj-mo">입주까지, 계약을 완성도 있게 <br class="nrj-mo">마무리하는 법을 익힙니다. <br>계약이 끝난 뒤에도 <br class="nrj-mo">고객과의 관계를 이어갑니다. <br>사업장을 넓히고, 옮기고, <br class="nrj-mo">두 번째 매장을 내는 2차 계약은 물론 <br>기존 고객의 소개가 <br class="nrj-mo">또 다른 계약으로 이어지는, <br class="nrj-mo">끊이지 않는 영업 구조를 만듭니다. <br>광고로 온 고객은 비교하고 오지만, <br class="nrj-mo">소개로 온 고객은 믿고 오기에 <br class="nrj-mo">계약 확률은 더 높아집니다.</p></div></div>
   </div>
 </div>
 
 <div class="nrj-sec nrj-gray nrj-work">
   <span class="nrj-chip">업무방식</span>
   <h2 class="nrj-h2">몸이 아닌 머리로.<br>감이 아닌 데이터로.</h2>
-  <p class="nrj-lead">노른자만의 누적된 데이터로 매물과 고객을 먼저 분석해 계약 확률은 높이고, <br class="nrj-pc">무작정 돌아다니는 불필요한 업무는 줄입니다. <br class="nrj-pc">반복 업무는 시스템에 맡기고, 상담과 계약에 집중합니다.</p>
+  <p class="nrj-lead">노른자만의 누적된 데이터로 <br class="nrj-mo">매물과 고객을 먼저 분석해 <br class="nrj-mo">계약 확률은 높이고, <br>무작정 돌아다니는 <br class="nrj-mo">불필요한 업무는 줄입니다. <br>반복 업무는 시스템에 맡기고, <br class="nrj-mo">상담과 계약에 집중합니다.</p>
   <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/work.webp" alt="듀얼 모니터로 상권 지도와 데이터를 분석하는 모습">
 </div>
 
@@ -322,13 +327,13 @@
 <div class="nrj-sec nrj-dark nrj-team">
   <span class="nrj-chip">팀문화</span>
   <h2 class="nrj-h2">경쟁 대신 협력.</h2>
-  <p class="nrj-lead"><b>시작할 땐 혼자여도, 일할 땐 혼자가 되지 않도록.</b> <br class="nrj-pc">매물도, 정보도, 노하우도 전부 나눕니다. <br class="nrj-pc">혼자 잘하는 사람보다 함께 이기는 팀을 지향합니다.</p>
+  <p class="nrj-lead"><b>시작할 땐 혼자여도, <br class="nrj-mo">일할 땐 혼자가 되지 않도록.</b> <br>매물도, 정보도, 노하우도 전부 나눕니다. <br>혼자 잘하는 사람보다 <br class="nrj-mo">함께 이기는 팀을 지향합니다.</p>
   <img class="nrj-photo" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/team.webp" alt="같은 박자로 노를 젓는 조정 팀">
 </div>
 
 <div class="nrj-sec nrj-apply">
   <span class="nrj-chip">지원</span>
-  <h2 class="nrj-h2">우리의 준비는 끝났습니다.<br>기회는 지금입니다.</h2>
+  <h2 class="nrj-h2">우리의 준비는 <br class="nrj-mo">끝났습니다.<br>기회는 지금입니다.</h2>
   <p class="nrj-lead">당신의 시작, 노른자와 함께하세요.</p>
   <div class="nrj-flow"><span>서류 지원</span><em>→</em><span>대표 1:1 면접</span><em>→</em><span>사무실 / 업무 안내</span><em>→</em><span>입사</span></div>
   <img class="nrj-apply-img" src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/apply.webp" alt="새 팀원을 맞이하며 악수를 청하는 모습">
@@ -336,10 +341,10 @@
     <span class="nrj-bar-accent"></span>
     <div class="nrj-letter-k">대표의 말</div>
     <div class="nrj-letter-b">
-      <p>저도 부동산을 처음 시작하려고 마음먹었을 때, <br class="nrj-pc">어디가 좋은 곳인지, 어떤 기준으로 선택해야 하는지, <br class="nrj-pc">무엇을 물어봐야 하는지 몰라 그저 막막하고 불안했습니다. <br class="nrj-pc">그래서 이 공고에는 그 마음을 덜어드리고자 좋아 보이는 말은 빼고, <br class="nrj-pc">직접 확인하실 수 있는 것들로만 채웠습니다.</p>
-      <p>앞에서 보신 숫자는 노른자부동산이 지금까지 걸어온 기록입니다. <br class="nrj-pc">제가 겪은 시행착오를 우리 팀원들은 겪지 않았으면 하는 마음에 <br class="nrj-pc">오랫동안 교육 과정을 다듬어 왔고, <br class="nrj-pc">이제는 배운 대로만 하시면 계약은 걱정 없다고 <br class="nrj-pc">말할 수 있는 단계까지 왔습니다.</p>
-      <p>공고에 다 담지 못한 내용은 면접에서 알려드리겠습니다. <br class="nrj-pc">궁금한 건 무엇이든 물어보세요.</p>
-      <p>끝까지 읽어주셔서 감사합니다. <br class="nrj-pc">어디서 시작하시든 그 도전을 응원하겠습니다.</p>
+      <p>저도 부동산을 처음 시작하려고 <br class="nrj-mo">마음먹었을 때, <br class="nrj-pc">어디가 좋은 곳인지, <br class="nrj-mo">어떤 기준으로 선택해야 하는지, <br>무엇을 물어봐야 하는지 몰라 <br class="nrj-mo">그저 막막하고 불안했습니다. <br>그래서 이 공고에는 그 마음을 <br class="nrj-mo">덜어드리고자 좋아 보이는 말은 빼고, <br>직접 확인하실 수 있는 <br class="nrj-mo">것들로만 채웠습니다.</p>
+      <p>앞에서 보신 숫자는 노른자부동산이 <br class="nrj-mo">지금까지 걸어온 기록입니다. <br>제가 겪은 시행착오를 우리 팀원들은 <br class="nrj-mo">겪지 않았으면 하는 마음에 <br>오랫동안 교육 과정을 다듬어 왔고, <br>이제는 배운 대로만 하시면 <br class="nrj-mo">계약은 걱정 없다고 <br>말할 수 있는 단계까지 왔습니다.</p>
+      <p>공고에 다 담지 못한 내용은 <br class="nrj-mo">면접에서 알려드리겠습니다. <br>궁금한 건 무엇이든 물어보세요.</p>
+      <p>끝까지 읽어주셔서 감사합니다. <br>어디서 시작하시든 <br class="nrj-mo">그 도전을 응원하겠습니다.</p>
     </div>
     <div class="nrj-sign"><span>노른자공인중개사사무소 대표</span><img src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/signature.webp" alt="대표 서명"></div>
   </div>
@@ -347,7 +352,7 @@
 
 <div class="nrj-foot">
   <img src="https://cdn.jsdelivr.net/gh/KFC-original/nrnj_img@v2026.10.06-862/2026-862/logo-footer.webp" alt="노른자 공인중개사사무소">
-  <p>Copyright Ⓒ 2026 노른자공인중개사사무소. All rights reserved.<br>본 공고의 제작물(상세페이지, 편집물, 그래픽, 문구, 구성)은 저작권법의 보호를 받습니다. 무단 사용 시 법적 책임이 따를 수 있습니다.</p>
+  <p>Copyright Ⓒ 2026 노른자공인중개사사무소. <br class="nrj-mo">All rights reserved.<br>본 공고의 제작물(상세페이지, 편집물, 그래픽, 문구, 구성)은 <br class="nrj-mo">저작권법의 보호를 받습니다. <br class="nrj-mo">무단 사용 시 법적 책임이 따를 수 있습니다.</p>
 </div>
 
 </div>
