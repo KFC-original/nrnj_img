@@ -55,9 +55,9 @@
 .nrj-tl-track s{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:#2e2e33;text-decoration:none}
 
 /* 04 day */
-.nrj-day{margin-top:24px;background:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
-.nrj-scene{display:flex;flex-direction:column}
-.nrj-scene+.nrj-scene{padding-left:24px;border-left:1px solid #e8e8ed}
+.nrj-day{margin-top:24px;background:#fff;border-radius:20px;padding:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 49px}
+.nrj-scene{position:relative;display:flex;flex-direction:column}
+.nrj-scene+.nrj-scene::before{content:"";position:absolute;top:0;bottom:0;left:-25px;width:1px;background:#e8e8ed}
 .nrj-scene-v{align-self:flex-start;font-size:22px;font-weight:800;line-height:1.21;background:linear-gradient(transparent 52%,#ffd98a 52%,#ffd98a 96%,transparent 96%);padding:0 10px 0 2px;margin-left:-2px}
 .nrj .nrj-scene-img{width:100%;max-width:200px;height:140px;margin-top:16px;object-fit:contain;object-position:left center}
 .nrj-scene-t{margin-top:28px}
@@ -159,7 +159,8 @@
   .nrj-stat-v{font-size:36px}
   .nrj-stat-d{font-size:16px}
   .nrj-day{margin-top:28px;padding:8px 20px;grid-template-columns:1fr;gap:0}
-  .nrj-scene,.nrj-scene+.nrj-scene{display:grid;grid-template-columns:96px 1fr;grid-template-areas:"v v" "i t";column-gap:16px;padding:20px 0;border:0;border-top:1px solid #e8e8ed}
+  .nrj-scene,.nrj-scene+.nrj-scene{display:grid;grid-template-columns:96px 1fr;grid-template-areas:"v v" "i t";column-gap:48px;padding:20px 0;border-top:1px solid #e8e8ed}
+  .nrj-scene+.nrj-scene::before{display:none}
   .nrj-scene:first-child{border-top:0}
   .nrj-scene-v{grid-area:v;justify-self:start;font-size:18px}
   .nrj .nrj-scene-img{grid-area:i;width:96px;height:67px;margin-top:12px}
